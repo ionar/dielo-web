@@ -55,18 +55,12 @@ font-feature-settings: 'liga';
   transition: all 1s ease;	
 }
 
-
+/* NAVBAR */
 nav.navbar {
-    background: #014a98;
+    background: #CF2B2A;
     min-height: 100px;
 }
 
-
-nav.navbar{
-	background: #014a98;
-	min-height: 100px;
-
-}
 h1,h2,h3{
 	font-family: 'Museo 900';
 	font-weight: normal;
@@ -78,72 +72,24 @@ h1 strong,h2 strong,h3 strong{
 p strong,strong{	 
 	 font-weight: bold;
 }
-.form-group label {
-    color: #000;
-    font-weight: 400;
+
+div img{
+	max-width: 100%;
+	height: auto;
 }
-.form-group label span {
-    margin-top:15px;
-}
-.form-group label span.wpcf7-not-valid-tip{
-    color:red;
-    margin-top:0px;
-    font-size:12px;
-    font-weight:600
-}
-.form-group label br{
-	display: none;
-}
+/*
+.navbar-brand {
+	border: 1px solid #000;
+    float: left;
+    height: 50px;
+    padding: 15px 15px;
+    font-size: 18px;
+    line-height: 20px;
+}*/
+
 .navbar-brand>img {
-    margin-right: 70px;
+    /*margin-right: 50px;*/
 }
-/* */
-
-.lista-resultado-busca{
-	margin: 20px auto;
-}
-.footer-absolute{
-	width: 100%;
-	position: absolute;
-	bottom: 0;
-}
-.centered{
-	float: none;
-	margin: auto;
-}
-.form-group label,
-.form-group label span{
-	display:block !important;
-	width:100% !important;
-}
-.form-group label span.aceite{
-	display:inline-block !important;
-	width:15px !important;
-
-}
-.slick-slide a,.slick-slide a:hover{
-	text-decoration: none;
-
-}
-.form-group label {
-    color: #000;
-    font-weight: 400;
-}
-.form-group label span {
-    margin-top:15px;
-}
-.form-group label span.wpcf7-not-valid-tip{
-    color:red;
-    margin-top:0px;
-    font-size:12px;
-    font-weight:600
-}
-.form-group label br{
-	display: none;
-}
-/* */
-
-
 
 ul.nav.navbar-nav.nav-social {
     margin-left: 33px;
@@ -159,7 +105,9 @@ ul.nav.navbar-nav.nav-social {
     margin-top: 25px;
 }
 .navbar-default {
-    border-color: #0054a6;
+    border-color: #CF2B2A;
+    border-radius: 0;
+
 }
 .navbar-default .navbar-toggle .icon-bar {
     background-color: #fff;
@@ -172,11 +120,24 @@ ul.nav.navbar-nav.nav-social {
 }
 .navbar-default .navbar-nav>li>a{
 	font-family: 'Museo 900';
-	/*font-style: italic;*/
 	color: #fff;
 	text-transform: uppercase;
 	font-size: 16px;
-	}
+	padding-top: 40px;
+    padding-bottom: 40px;
+	-webkit-transition: .4s;
+    -moz-transition: .4s;
+    -ms-transition: .4s;
+    -o-transition: .4s
+}
+
+.navbar-default .navbar-nav>li>.dropdown-menu {
+	border: 1px solid #FF0000;
+}
+.navbar-default .navbar-nav>li>.dropdown-menu li a {
+	font-family: 'Museo 700';
+}
+
 .navbar-default .navbar-nav>li>a i {
     background: #fff;
     color: #004a98;
@@ -185,7 +146,8 @@ ul.nav.navbar-nav.nav-social {
     height: 30px;
     border-radius: 100%;
     line-height: 30px;
-}.navbar-default .navbar-nav>li>a i:hover {
+}
+.navbar-default .navbar-nav>li>a i:hover {
     background:#1ae0fd;
 }
 .navbar-default .navbar-nav.nav-social li>a{
@@ -198,7 +160,7 @@ ul.nav.navbar-nav.nav-social {
 }
 .navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-nav>li>a:hover,.navbar-nav>li.current-menu-item a {
     color: #1ae0fd;
-    }
+}
 .pesquisa .input-group-btn {
 	
    
