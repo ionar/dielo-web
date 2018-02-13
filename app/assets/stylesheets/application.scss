@@ -197,3 +197,103 @@ button.btn.btn-default:hover {
 	.pesquisa > .input-group>.form-control {
     border-radius: 3px !important;
 }
+
+@media (min-width: 768px){
+	.navbar-nav>li>a {
+    	padding-top: 40px;
+    	padding-bottom: 40px;
+	}
+}
+
+@media (max-width: 768px){
+	h1,h2,h3,h4{
+		font-size:22px;
+	}
+	p  img{
+		margin-bottom: 30px;
+	}
+	.navbar-brand>img{
+    	margin-right: 0px;
+    }
+}	
+
+@media (max-width: 330px){
+	.navbar-default .navbar-brand{
+		width: 70%;
+	}
+	.navbar-default .navbar-brand img {
+    width: 100%;
+    margin-top: 11px;
+	}
+}
+
+@media (max-width: $screen-sm){
+	.navbar-default .navbar-nav>li>a{
+		font-size: 16px;
+		padding-top: 10px;
+	    padding-bottom: 10px;
+	}
+	
+	.navbar-default .navbar-nav>li>.dropdown-menu li a {
+		color: #fff !important;
+	}
+	.navbar-default .navbar-nav>li>.dropdown-menu li a:hover {
+		color: $vermelho-active !important;
+	}
+}
+
+/* #Tablet (Portrait) */
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+	.container {
+		width: 768px; 
+	}
+}
+
+
+/*  #Mobile (Portrait) - Note: Design for a width of 320px */
+@media only screen and (max-width: 767px) {
+	.container { 
+		width: 95%; 
+	}
+	
+}
+
+
+/* #Mobile (Landscape) - Note: Design for a width of 480px */
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+	.container {
+		width: 70%;
+	}
+	
+}
+
+/* #Clearing */
+
+/* Self Clearing Goodness */
+.container:after { content: "\0020"; display: block; height: 0; clear: both; visibility: hidden; }
+
+.clearfix:before,
+.clearfix:after,
+.row:before,
+.row:after {
+  content: '\0020';
+  display: block;
+  overflow: hidden;
+  visibility: hidden;
+  width: 0;
+  height: 0; }
+.row:after,
+.clearfix:after {
+  clear: both; }
+.row,
+.clearfix {
+  zoom: 1; }
+
+.clear {
+  clear: both;
+  display: block;
+  overflow: hidden;
+  visibility: hidden;
+  width: 0;
+  height: 0;
+}
