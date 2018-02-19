@@ -60,4 +60,4 @@ gem 'bootstrap-sass', '~> 3.3.6'
 gem 'jquery-rails'
 gem 'simple_form'
 gem 'devise'
-
+gem 'devise-bootstrap-views'
