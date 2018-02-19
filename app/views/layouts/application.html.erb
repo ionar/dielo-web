@@ -20,8 +20,10 @@
   </head>
 
   <body>
-  <nav class="navbar navbar-default">
-  <div class="container">
+
+  	<div id="cab">
+<nav class="navbar navbar-default">
+  <div class="container menu-circle">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
@@ -68,18 +70,33 @@
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container -->
 </nav>
-  	<div class="cab">
-      <div class="container">
-    		<h1>teste-teste</h1>
-  	  </div>
-    </div>
+    </div><!-- /#cab -->
+
     <%= yield %>
     <!-- FOOTER -->
     <div id="footer">
       <div class="footer-text">
         <div class="container">
-          <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-            <i class="icone-telefone"></i>
+          <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 text-center-xs">
+            <%= image_tag 'dielo-logo-cab-2.png', alt: "Diêlo - Mais sabor na sua vida", class: 'footer-logo' %>
+            <br><br>
+            <p class="footer-dizeres">
+              <!-- LOGIN -->
+                <% if user_signed_in? %>
+                    <%= link_to edit_user_registration_path do %><span class="glyphicon glyphicon-user"></span> <%= current_user.email %><% end %>
+                    <br>
+                    <%= link_to destroy_user_session_path, method: :delete do %><span class="glyphicon glyphicon-log-out"></span> Sair <% end %>
+                     <br>
+                  <% else %>
+                    <%= link_to new_user_session_path do %><span class="glyphicon glyphicon-log-in"></span> Login <% end %>
+                    <br>
+                <% end %>
+              <!-- /LOGIN -->
+            </p>
+          <div class="visible-xs"><hr></div>
+          </div>
+          <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 text-center-xs">
+          <i class="icone-telefone"></i>
             <h4>0800.644.2891<br>
                 <span>(49) 3631-7900</span><br>                       
               </h4>
@@ -88,14 +105,10 @@
                 CEP 89.900-000<br>
                 São Miguel do Oeste - SC
               </p>
-          <div class="visible-xs"><hr></div>
-          </div>
-          <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-            teste
             <div class="visible-xs"><hr></div>
           </div>
           <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-            <p class="footer-dizeres text-center">
+            <p class="footer-dizeres text-right">
               Desenvolvido por <a href="http://agenciaspo.com.br">agenciaspo.com.br</a>
             </p>
           </div>
