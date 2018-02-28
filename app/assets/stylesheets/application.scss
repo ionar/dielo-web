@@ -42,7 +42,7 @@ $vermelho-active: #EFAEAE;
 /* ------------- */
 #cab {
  	width: 100%;
- 	background: image-url('layout-bg-cab');
+ 	background: image-url('bg-bolinha.jpg');
  	height: 663px;
  	min-height: 663px;
 	padding-top: 0;
@@ -52,9 +52,9 @@ $vermelho-active: #EFAEAE;
 
 .menu-circle{
 	border: 1px solid #fff;
-	-moz-border-radius:20px;
-	-webkit-border-radius:20px;
- 	border-radius:20px;
+	-moz-border-radius:15px;
+	-webkit-border-radius:15px;
+ 	border-radius:15px;
 
 }
 
@@ -75,7 +75,7 @@ font-feature-settings: 'liga';
 /* NAVBAR */
 nav.navbar {
     background: $vermelho-tema;
-    /*background: transparent;*/
+    background: transparent;
     min-height: 100px;
 }
 
@@ -123,7 +123,8 @@ ul.nav.navbar-nav.nav-social {
     margin-top: 25px;
 }
 .navbar-default {
-    border-color: $vermelho-tema;
+    /*border-color: $vermelho-tema;*/
+    border-color: transparent;
     border-radius: 0;
 
 }
