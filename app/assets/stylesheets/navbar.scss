@@ -2,7 +2,8 @@
 nav.navbar {
     background: $vermelho-tema;
     background: transparent;
-    min-height: 100px;
+	min-height: 100px;
+	z-index: 1000;
 }
 
 /*
