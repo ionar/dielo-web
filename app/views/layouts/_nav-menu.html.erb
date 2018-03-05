@@ -1,0 +1,48 @@
+<nav class="navbar navbar-default">
+  <div class="container menu-circle">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <div class="visible-xs">
+          <%= link_to root_path, :class => 'navbar-brand' do %>
+            <%= image_tag 'dielo-logo-cab-shadow.png', width: '170' %>
+          <% end %>
+      </div>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Quem somos <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">História</a></li>
+            <li><a href="#">Indústria</a></li>
+            <li><a href="#">Qualidade</a></li>
+            <li><a href="#">Frota</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Produtos <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Picolés</a></li>
+            <li><a href="#">Sorvetes</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Onde Encontrar</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Seja um parceiro <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Tenha um freezer em seu estabelecimento</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Fale conosco</a></li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container -->
+</nav>
