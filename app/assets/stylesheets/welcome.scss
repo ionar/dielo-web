@@ -4,10 +4,10 @@
 
 #banner {
     height: 445px;
-    background-image: image-url('banner-teste.jpg');
     width: auto;
-    background-position: center top;
-	background-repeat: no-repeat;	
-	position: static;
-	clear: both;
+    background: image-url('banner-teste1.jpg') no-repeat center top; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
