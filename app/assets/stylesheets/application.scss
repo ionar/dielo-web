@@ -25,6 +25,7 @@ $vermelho-active: #EFAEAE;
  @import "bootstrap";
  @import "parallax";
  @import "navbar";
+ @import "welcome";
 
 
 
@@ -45,23 +46,16 @@ src: local('Museo 700'), font-url('Museo700-Regular.woff') format('woff');
 
 
 #cab {
+	position: relative;
  	width: 100%;
- 	background: image-url('bg-bolinha.jpg');
+	background: image-url('bg-bolinha.jpg');
+	background-color: $vermelho-tema;
  	height: 663px;
  	min-height: 663px;
 	padding-top: 0;
 	padding-bottom: 0;
-	background-color: $vermelho-tema;
 	overflow: hidden;
 	transform: translate3d(0,0,0);
-}
-
-.menu-circle{
-	border: 1px solid #fff;
-	-moz-border-radius:15px;
-	-webkit-border-radius:15px;
- 	border-radius:15px;
-
 }
 
 h1 {

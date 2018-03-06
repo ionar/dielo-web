@@ -6,16 +6,16 @@
 }
 
 #layer_1{
-	background: image-url('parallax/esquerda-trufado.png') no-repeat -60px 80px;
+	background: image-url('parallax/esquerda-trufado.png') no-repeat -120px 100px;
 }
 #layer_2{
-	background: image-url('parallax/esquerda-branco.png') no-repeat -230px 80px;
+	background: image-url('parallax/esquerda-branco.png') no-repeat -270px 70px;
 }
 #layer_3{
     background: image-url('parallax/direita-mexicano.png') no-repeat;
-    background-position : calc(100% - -50px) 80px;
+    background-position : calc(100% - -80px) 100px;
 }
 #layer_4{
     background: image-url('parallax/direita-dicone.png') no-repeat;
-    background-position : calc(100% - -230px) 80px;
+    background-position : calc(100% - -260px) 70px;
 }

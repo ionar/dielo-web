@@ -1,3 +1,18 @@
+#nav-wrapper{
+	top: 20px;
+	position: absolute;
+	width: 100%;
+}
+
+
+.menu-circle{
+	border: 1px solid #fff;
+	-moz-border-radius:15px;
+	-webkit-border-radius:15px;
+ 	border-radius:15px;
+
+}
+
 /* NAVBAR */
 nav.navbar {
     background: $vermelho-tema;
@@ -169,4 +184,18 @@ button.btn.btn-default:hover {
 	.navbar-default .navbar-nav>li>.dropdown-menu li a:hover {
 		color: $vermelho-active !important;
 	}
+}
+
+/* Centralizar links */
+@media (min-width: 768px) {
+    .navbar .navbar-nav {
+        display: inline-block;
+        float: none;
+		vertical-align: top;
+		/*border: 1px solid #ff0000;*/
+    }
+
+    .navbar .navbar-collapse {
+		text-align: center;
+    }
 }
