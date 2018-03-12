@@ -22,9 +22,9 @@
 $(document).on("turbolinks:load", function() {
 
     $("#layer_1").delay(300).animate({top: "0"}, 'slow', 'swing');
-    $("#layer_2").delay(600).animate({top: "0"}, 'slow', 'swing');
-    $("#layer_3").delay(900).animate({top: "0"}, 'slow', 'swing');
-    $("#layer_4").delay(1200).animate({top: "0"}, 'slow', 'swing');
+    $("#layer_2").delay(900).animate({top: "0"}, 'slow', 'swing');
+    $("#layer_3").delay(600).animate({top: "0"}, 'slow', 'swing');
+    $("#layer_4").delay(1100).animate({top: "0"}, 'slow', 'swing');
     $("#layer_5").delay(0).animate({top: "0"}, 'slow', 'swing');
     $("#layer_6").delay(100).animate({top: "0"}, 'slow', 'swing');
 
