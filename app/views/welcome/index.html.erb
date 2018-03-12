@@ -1,1 +1,48 @@
 <div id="banner"></div>
+<!-- Carousel -->
+
+<div id="carousel-sematter" class="carousel slide" data-ride="carousel">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+  <% @banners.each_with_index do |banner, index| %>
+            <%=
+            if index == 0
+                render inline: "<li data-target='#carousel-sematter' data-slide-to='#{index}' class='active'></li>"
+            else
+                render inline: "<li data-target='#carousel-sematter' data-slide-to='#{index}'></li>"
+            end %>
+        <% end %>
+  </ol>
+ 
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner">
+ 
+        <%# btn = image_path('bt-saiba-mais.png') %>
+           <% @banners.each_with_index do |banner, index| %>
+            <%=          
+                if index == 0
+                    render inline: "
+                                    <div class='item active'>
+                                      <div onclick=\"javascript:location.href='#{banner.link}'\" class='fill' style=\"background-image:url('#{banner.image.url(:original)}');\">
+                                      </div>
+                                    </div>
+                    "
+                else
+                    render inline: "
+                                    <div class='item'>
+                                      <div onclick=\"javascript:location.href='#{banner.link}'\" class='fill' style=\"background-image:url('#{banner.image.url(:original)}');\">
+                                      </div>
+                                    </div>
+                    "
+                end %>
+            <% end %>
+  </div>
+ 
+  <!-- Controls -->
+  <a class="left carousel-control" href="#carousel-sematter" role="button" data-slide="prev">
+ <span class="glyphicon glyphicon-chevron-left"></span>
+  </a>
+  <a class="right carousel-control" href="#carousel-sematter" role="button" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right"></span>
+  </a>
+</div> <!-- Carousel -->
