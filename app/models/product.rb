@@ -3,10 +3,4 @@ class Product < ApplicationRecord
 
   validates :name, presence: true
 
-
-  #rails_admin do
-  #  configure :category do
-  #    label 'Categoria: '
-  #  end
-  #end
 end
