@@ -21,6 +21,11 @@
 //$(document).on("page:change", function() {
 $(document).on("turbolinks:load", function() {
 
+    $(".auto-close-alert").fadeTo(2000, 500).slideUp(500, function(){
+      $(".auto-close-alert").slideUp(500);
+    });
+
+
     $("#layer_1").delay(300).animate({top: "0"}, 'slow', 'swing');
     $("#layer_2").delay(900).animate({top: "0"}, 'slow', 'swing');
     $("#layer_3").delay(600).animate({top: "0"}, 'slow', 'swing');

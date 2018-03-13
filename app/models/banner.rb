@@ -20,6 +20,15 @@ class Banner < ApplicationRecord
         field :link
         field :sequence
     end
+    show do
+        field :image do
+            pretty_value do
+                bindings[:view].tag(:img, { :src => bindings[:object].image.url(:thumb) })
+            end
+        end
+        field :link
+        field :sequence
+    end
 
 
 

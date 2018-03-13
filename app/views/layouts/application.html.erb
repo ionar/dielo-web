@@ -30,6 +30,16 @@
   </head>
 
   <body>
+  <!-- Flash messages -->
+<% flash.each do |type, message| %>
+  <div class="auto-close-alert alert <%= bootstrap_class_for(type) %> alert-dismissible fade in" role="alert" id="flash-message-wrapper">
+    <div class="container">
+    	<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+    	<span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span> <%= message %>
+    </div><!-- /container -->
+  </div>
+<% end %><!-- /flash messages -->
+
     <div id="cab">      
       <div id="nav-wrapper">
         <%= render partial: 'layouts/nav-menu' %>
