@@ -1,0 +1,40 @@
+#produtos {
+    width: 100%;
+    background: image-url('bg-bolinha.jpg');
+    background-color: $vermelho-tema;
+    padding-top: 40px;
+    padding-bottom: 0;
+    box-shadow: inset 0px 18px 19px 3px rgba(0,0,0,0.4);
+    -webkit-box-shadow: inset 0px 18px 19px 3px rgba(0,0,0,0.4);
+    -moz-box-shadow: inset 0px 18px 19px 3px rgba(0,0,0,0.4);
+ }
+
+.envolucro{
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+ .category-name{
+    font-family: 'Museo 900';
+    text-align: center;
+    color: #fff;
+    font-weight: normal;
+    font-size: 28px;
+    border: 1px solid #fff;
+    width: 200px;
+    -moz-border-radius:15px;
+    -webkit-border-radius:15px;
+    border-radius:15px;
+    background-color: $vermelho-tema;
+ }
+
+ .products-list{
+    border: 1px solid #fff;
+    -moz-border-radius:15px;
+    -webkit-border-radius:15px;
+    border-radius:15px;
+    padding: 10px;
+    margin-top: -20px;
+ }
