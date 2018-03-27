@@ -7,18 +7,18 @@
 }
 
 #layer_1{
-	background: image-url('parallax/esquerda-trufado.png') no-repeat -120px 100px;
+	background: image-url('parallax/esquerda-trufado.png') no-repeat -120px 200px;
 }
 #layer_2{
-	background: image-url('parallax/esquerda-branco.png') no-repeat -270px 70px;
+	background: image-url('parallax/esquerda-branco.png') no-repeat -270px 160px;
 }
 #layer_3{
     background: image-url('parallax/direita-mexicano.png') no-repeat;
-    background-position : calc(100% - -80px) 100px;
+    background-position : calc(100% - -80px) 200px;
 }
 #layer_4{
     background: image-url('parallax/direita-dicone.png') no-repeat;
-    background-position : calc(100% - -260px) 70px;
+    background-position : calc(100% - -260px) 160px;
 }
 #layer_5{
 	background: image-url('logo-mais-sabor.png') no-repeat center 200px;
