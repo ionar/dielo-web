@@ -24,6 +24,7 @@ default: &default
   database: <%= ENV['DIELO_WEB_DATABASE_DATABASE'] %>
   username: <%= ENV['DIELO_WEB_DATABASE_USERNAME'] %>
   password: <%= ENV['DIELO_WEB_DATABASE_PASSWORD'] %>
+  host: <%= ENV['DIELO_WEB_DATABASE_HOST'] %>
 
 
 development:
@@ -87,4 +88,4 @@ test:
 production:
   <<: *default
 
-  url: <%= ENV['DATABASE_URL'] %>
+  #url: <%= ENV['DATABASE_URL'] %>
