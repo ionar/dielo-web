@@ -66,3 +66,4 @@ gem 'devise'
 gem 'devise-bootstrap-views'
 gem 'rails_admin', '~> 1.3'
 gem "paperclip", "~> 5.2.1"
+gem 'mail_form'
