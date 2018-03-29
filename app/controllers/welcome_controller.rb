@@ -15,10 +15,10 @@ class WelcomeController < ApplicationController
         # re-initialize Home object for cleared form
         @contact = Welcome.new
         format.html { render 'index'}
-        format.js   { flash.now[:success] = @message = "Thank you for your message. I'll get back to you soon!" }
+        format.js   { flash.now[:success] = @message = "Obrigado por sua mensagem. Responderemos em breve!" }
       else
         format.html { render 'index' }
-        format.js   { flash.now[:error] = @message = "Message did not send." }
+        format.js   { flash.now[:error] = @message = "Mensagem não foi enviada" }
       end
     end
   end

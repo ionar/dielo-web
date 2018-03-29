@@ -1,0 +1,12 @@
+mail_form:
+  models:
+    contact_form: "Formulario de contato do site www.dielo.com.br"
+  attributes:
+    contact_form:
+      email: "E-mail"
+      telephone: "Fone"
+      message: "Mensagem enviada"
+  request:
+    title: "Informações técnicas"
+    remote_ip: "IP"
+    user_agent: "Navegador"

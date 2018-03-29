@@ -67,5 +67,5 @@ Rails.application.configure do
 
     # whitelist ips do vagrant - ionar
 
-    config.web_console.whitelisted_ips = '10.0.2.0/24'
+  config.web_console.whitelisted_ips = '10.0.2.0/24'
 end
