@@ -64,4 +64,8 @@ Rails.application.configure do
     password:              ENV["GMAIL_PASSWORD"],
     authentication:      'plain',
     enable_starttls_auto: true  }
+
+    # whitelist ips do vagrant - ionar
+
+    config.web_console.whitelisted_ips = '10.0.2.0/24'
 end
