@@ -19,6 +19,7 @@ $vermelho-tema: #CF2B2A;
 $vermelho-escuro: #A51417;
 $vermelho-active: #EFAEAE;
 
+
 /* ------------- */
 
  @import "bootstrap-sprockets";
@@ -96,6 +97,11 @@ div img{
 	height: auto;
 }
 
+.titulo-wrapper{
+	padding-top: 10px;
+	padding-bottom: 20px;
+}
+
 
 /* #Tablet (Portrait) */
 @media only screen and (min-width: 768px) and (max-width: 959px) {
@@ -162,7 +168,7 @@ div img{
 .footer-text{
 	padding-top: 20px;
 	padding-bottom: 20px;
-	background: image-url('hr.png') 0 0 no-repeat $vermelho-tema;
+	background: image-url('hr.png') 0 0 no-repeat $vermelho-escuro;
     background-size: auto auto;
 	background-size: 100% 6px;
 	box-shadow: 0 8px 6px -6px rgba(0,0,0,0.4);
@@ -186,8 +192,8 @@ div img{
 	height: 460px;
 	background: $vermelho-tema image-url('banner-30anos.jpg') no-repeat fixed center top/cover;
 	*/
-	height: 460px;
-	background-image: image-url('footer-aerea.jpg');
+	height: 860px;
+	background-image: image-url('footer-aerea2.jpg');
 	width: auto;
 	max-width: inherit;
 	min-width: inherit;
