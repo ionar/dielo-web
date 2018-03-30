@@ -34,6 +34,7 @@ $(document).on("turbolinks:load", function() {
     $("#layer_6").delay(100).animate({top: "0"}, 'slow', 'swing');
 
 
+
 // Efeito parralax cab  
   function parallax(){
     var layer_1 = document.getElementById('layer_1');
@@ -42,6 +43,7 @@ $(document).on("turbolinks:load", function() {
     var layer_4 = document.getElementById('layer_4');
     var layer_5 = document.getElementById('layer_5');
     var layer_6 = document.getElementById('layer_6');
+    var layer_7 = document.getElementById('layer_7');
   
     layer_1.style.top = -(window.pageYOffset / 1) + 'px';
     layer_2.style.top = -(window.pageYOffset / 2) + 'px';
@@ -49,6 +51,7 @@ $(document).on("turbolinks:load", function() {
     layer_4.style.top = -(window.pageYOffset / 4) + 'px';
     layer_5.style.top = -(window.pageYOffset / 6) + 'px';
     layer_6.style.top = -(window.pageYOffset / 7) + 'px';
+    layer_7.style.top = -(window.pageYOffset / 1) + 'px';
   }
   window.addEventListener("scroll", parallax, false);
 // fim parallax
