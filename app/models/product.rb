@@ -1,5 +1,5 @@
 class Product < ApplicationRecord
-  belongs_to :category
+  	belongs_to :line
 
     validates :name, presence: true
     validates :name, uniqueness: true
