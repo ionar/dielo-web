@@ -13,9 +13,17 @@
             </div>
         </div><!-- /envolucro -->
         <div class="products-list">
-          <% Line.where(category_id: category.id).each do |line| %>
-            <span> <%= line.name %> </span><br>
-          <% end %>
+          <ul>
+            <% Line.where(category_id: category.id).each do |line| %>
+              <li> <%= line.name %> 
+                <ul>
+                  <% Product.where(line_id: line.id).each do |product| %>
+                  <li> <%= product.name %></li>
+                  <% end %>
+                </ul>
+              </li>
+            <% end %>
+          </ul>
         </div><!-- /products-list -->
       </div><!-- /col -->
       <% end %>
