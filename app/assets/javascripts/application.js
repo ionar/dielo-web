@@ -23,8 +23,23 @@
 //$(document).on("page:change", function() {
 $(document).on("turbolinks:load", function() {
 
+    // ScrollReveal
     $(function() {
       window.scrollReveal = new scrollReveal();
+    });
+
+    /* Efeito Scroll UP */
+    $(window).scroll(function(){
+      if ($(this).scrollTop() > 100) { 
+        $('.scrollup_fade').fadeIn();
+      } else {
+      $('.scrollup_fade').fadeOut();
+      }
+    });
+    
+    $('.scrollup_fade,.back_top').click(function(){
+      $("html, body").animate({scrollTop: 0 }, 600);
+      return false;
     });
 
     $(".auto-close-alert").fadeTo(2000, 500).slideUp(500, function(){
