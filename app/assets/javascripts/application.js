@@ -16,10 +16,16 @@
 //= require jquery
 //= require bootstrap-sprockets
 
+//= require scrollReveal
+
 //= require_tree .
 
 //$(document).on("page:change", function() {
 $(document).on("turbolinks:load", function() {
+
+    $(function() {
+      window.scrollReveal = new scrollReveal();
+    });
 
     $(".auto-close-alert").fadeTo(2000, 500).slideUp(500, function(){
       $(".auto-close-alert").slideUp(500);
@@ -64,5 +70,7 @@ $(document).on("turbolinks:load", function() {
         scrollTop: $(section).offset().top
     },1200);
   });
+
+
 
 });

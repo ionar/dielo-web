@@ -1,9 +1,11 @@
 <!-- Produtos -->
 <div id="produtos">
   <div class="container">
+    <%= scroll_reveal animation: 'enter bottom move 100px, after 1s' do %>
     <div class="titulo-wrapper text-center">
       <%= image_tag 'titulo-produtos.png', alt: 'Produtos' %>
     </div>
+    <% end %>
     <div class="categorias-list row">
     <% @categories.each do |category|  %>
       <div class="col-lg-6 col-md-6">

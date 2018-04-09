@@ -1,0 +1,56 @@
+<div id="quem-somos">
+	<div class="container">
+        <%= scroll_reveal animation: 'enter bottom move 100px, after 1s' do %>
+	        <div class="titulo-wrapper text-center">
+	            <%= image_tag 'titulo-quem_somos.png', alt: 'Quem somos' %>
+	        </div>
+        <% end %>
+        <div class="row">
+        	<%= scroll_reveal animation: 'enter right move 100px' do %>
+        	<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+        		<h2 class="text-center">INDÚSTRIA</h2>
+        		<p class="lead">
+        			A <strong>Diêlo Alimentos</strong> conta com uma estrutura fabril moderna e equipamentos de última geração. Desenvolvemos produtos diferenciados que atendam o público consumidor e as legislações vigentes. Com mais de 30 anos de tradição em produzir sorvetes e picolés e uma equipe capacitada, a empresa desenvolve, produz e comercializa seus produtos com um rigoroso controle de processos, o que nos permite, através de manuais, procedimentos operacionais, monitoramento e rastreamento de produtos ofertar segurança e confiabilidade ao consumidor. Com respeito ao meio ambiente, a industria conta com um eficiente tratamento de seus resíduos além da captação de água pluvial e sistema de aquecimento solar, garantindo aos processos melhoria contínua e práticas de sustentabilidade.
+        		</p>
+        	</div><!-- /col -->
+        	<% end %>
+        	<%= scroll_reveal animation: 'enter left move 100px' do %>
+        	<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+        		<div class="video"><iframe width="100%" height="315" src="https://www.youtube.com/embed/VRi_1mJhVZQ" frameborder="0" allowfullscreen></iframe></div>
+        	</div><!-- /col -->
+        	<% end %>      	
+        </div><!-- /row -->
+        <%= scroll_reveal content: '<hr>'.html_safe, animation: 'enter bottom and move 100px over 1.33s' %>
+        <div class="row">
+        	<%= scroll_reveal animation: 'enter right move 100px' do %>
+        	<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+        		<%= image_tag 'quem-somos-qualidade.jpg', alt: "Qualidade", class: 'img-responsive img-thumbnail' %>
+        	</div><!-- /col -->
+        	<% end %>
+        	<%= scroll_reveal animation: 'enter left move 100px' do %>
+        	<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+        		<h2 class="text-center">QUALIDADE</h2>
+        		<p class="lead">
+        			A empresa <strong>Diêlo Alimentos</strong> tem como objetivo a satisfação de seus clientes, investindo em melhorias contínuas através de qualificação e treinamento profissional de seus colaboradores, conta com equipe de P&D, equipe de auditores internos e programas de qualidade implantados desde 2005, com 5 SENSOS, BPF (Boas Práticas de Fabricação) e APPCC (Análise de Perigos e Pontos Críticos de Controle) e em implementação ISO 22000 Segurança em Alimentos para atender legislação vigente. Os produtos Diêlo são monitorados em todas as etapas do processo produtivo, desde a estocagem da matéria-prima, controle de alergênicos, padronização, liberação do produto por lote, controle de temperaturas de estocagem, programa de monitoramento de temperatura da frota de distribuição e rastreabilidade dos produtos. Contamos com laboratório interno para avaliar todas as etapas dos processos e matérias-primas por meio de análise microbiológicas e físico químicas, priorizando a segurança alimentar.
+        		</p>
+        	</div><!-- /col --> 
+        	<% end %>       	
+        </div><!-- /row -->
+        <%= scroll_reveal content: '<hr>'.html_safe, animation: 'enter bottom and move 100px over 1.33s' %>
+        <div class="row">
+        	<%= scroll_reveal animation: 'enter right move 100px' do %>
+        	<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+        		<h2 class="text-center">FROTA E LOGÍSTICA</h2>
+        		<p class="lead">
+        			São 30 caminhões câmara fria que garantem a entrega aos mais de 5.500 pontos de vendas.
+        		</p>
+        	</div><!-- /col -->
+        	<% end %>
+        	<%= scroll_reveal animation: 'enter left move 100px' do %>
+        	<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+        		<%= image_tag 'quem-somos-frota.jpg', alt: "Frota", class: 'img-responsive img-thumbnail' %>
+        	</div><!-- /col -->  
+        	<% end %>      	
+        </div><!-- /row -->          
+    </div><!-- /container -->
+</div>
