@@ -221,24 +221,3 @@ div img{
 	margin-top:10px;
 }
 
-/* Estilo do Botão */
-.scrollup_fade {
-	background:image-url('scroll.png') no-repeat ;
-	opacity:0.7;
-	width:40px;
-	height:40px;
-	position:fixed;
-	bottom:30px;
-	right:30px;
-	cursor: pointer;
-	display: none;
-	-webkit-transition: all .150s ease;
-  	-moz-transition: all .150s ease;
-  	-o-transition: all .150s ease;
-  	transition: all .150s ease;	
-}
- 
-.scrollup_fade:hover {
-	opacity:1;
-	box-shadow: 0 8px 6px -6px rgba(0,0,0,0.4);
-}
