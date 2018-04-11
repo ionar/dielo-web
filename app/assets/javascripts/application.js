@@ -16,6 +16,7 @@
 //= require jquery
 //= require bootstrap-sprockets
 
+
 //= require scrollReveal
 
 //= require_tree .
