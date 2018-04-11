@@ -31,7 +31,7 @@ $(document).on("turbolinks:load", function() {
 
     /* Efeito Scroll UP */
     $(window).scroll(function(){
-      if ($(this).scrollTop() > 100) { 
+      if ($(this).scrollTop() > 200) { 
         $('.scrollup_fade').fadeIn();
       } else {
       $('.scrollup_fade').fadeOut();
