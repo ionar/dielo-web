@@ -78,6 +78,7 @@
  .line-wrapper:hover{
     /*border: 1px dotted #fff;*/
     background-color: $vermelho-escuro;
+    background-size: 65%;
     -moz-border-radius:15px;
     -webkit-border-radius:15px;
     border-radius:15px;
@@ -97,4 +98,12 @@
         transition: all 0.6s ease;        
 
     }
+
+        .line-name-span{
+            border: 8px solid #fff;
+            -webkit-transition: all 0.6s ease;
+            -moz-transition: all 0.6s ease;
+            -o-transition: all 0.6s ease;
+            transition: all 0.6s ease; 
+        }
  }
