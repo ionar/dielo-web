@@ -14,21 +14,19 @@
                 <%= category.name %>
             </div>
         </div><!-- /envolucro -->
-        <div class="lines-list">
-          <div class="row">
+        <div class="products-list">
+          <ul>
             <% Line.where(category_id: category.id).each do |line| %>
-              <div class="line-wrapper col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                <div class="line-name">
-                  <span class="line-name-span lead"><%= line.name %></span>
-                </div><!-- /line-name -->
-
-                <div class="line-photo">
-                  <%= image_tag line.image.url(:original), alt: line.name, class: 'img-responsive' %>
-                </div><!-- /line-photo" -->
-              </div><!-- /line-wrapper -->
+              <li> <%= line.name %> 
+                <ul>
+                  <% Product.where(line_id: line.id).each do |product| %>
+                  <li> <%= product.name %></li>
+                  <% end %>
+                </ul>
+              </li>
             <% end %>
-          </div><!-- /row -->
-        </div><!-- /lines-list -->
+          </ul>
+        </div><!-- /products-list -->
       </div><!-- /col -->
       <% end %>
     </div><!-- /categorias-list row --> 

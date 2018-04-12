@@ -7,7 +7,6 @@
     box-shadow: inset 0px 18px 19px 3px rgba(0,0,0,0.4);
     -webkit-box-shadow: inset 0px 18px 19px 3px rgba(0,0,0,0.4);
     -moz-box-shadow: inset 0px 18px 19px 3px rgba(0,0,0,0.4);
-    color: #fff;
     font-family: 'Museo 700';
  }
 
@@ -18,6 +17,7 @@
     flex-wrap: wrap;
     justify-content: center;
 }
+
  .category-name{
     font-family: 'Museo 900';
     text-align: center;
@@ -32,12 +32,59 @@
     background-color: $vermelho-tema;
  }
 
- .products-list{
+ .lines-list{
     border: 1px solid #fff;
     -moz-border-radius:15px;
     -webkit-border-radius:15px;
     border-radius:15px;
-    padding: 20px;
+    padding: 40px;
     margin-top: -20px;
     margin-bottom: 20px;
+ }
+
+ .line-wrapper{    
+    border: 1px solid transparent;
+    background-image: image-url('bg-pontilhado.png');
+    background-repeat: no-repeat;
+    background-size: 75%;
+    background-position: center;
+
+    .line-name{
+        position: absolute;
+        padding-top:25px;
+        width: 90%;
+        text-align: center;
+
+        .line-name-span{
+            background-color: #fff;
+            color: $vermelho-tema;
+            /*padding: 5px;*/
+            border: 4px solid #fff;
+            -moz-border-radius:5px;
+            -webkit-border-radius:5px;
+            border-radius:5px;
+            box-shadow: 0 8px 6px -6px rgba(0,0,0,0.4);
+            /*font-size: 16px;*/
+        }
+    }
+
+
+
+    .line-photo{
+        text-align: center;
+    }
+ }
+
+ .line-wrapper:hover{
+    /*border: 1px dotted #fff;*/
+    background-color: $vermelho-escuro;
+    -moz-border-radius:15px;
+    -webkit-border-radius:15px;
+    border-radius:15px;
+    box-shadow: 0 8px 6px -6px rgba(0,0,0,0.4);
+    cursor: pointer;
+    -webkit-transition: all 0.6s ease;
+    -moz-transition: all 0.6s ease;
+    -o-transition: all 0.6s ease;
+    transition: all 0.6s ease;
  }
