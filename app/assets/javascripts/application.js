@@ -87,6 +87,4 @@ $(document).on("turbolinks:load", function() {
     },1200);
   });
 
-
-
 });

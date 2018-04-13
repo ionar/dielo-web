@@ -1,0 +1,4 @@
+$("#products-modal").html("<%= escape_javascript render(partial: "todos", locals: {products: @products}) %>")
+$("#products-modal").modal("show")
+
+console.log("PROCESSANDO ARQUIVO INDEX.JS DO CONTROLLER PRODUCTS")
