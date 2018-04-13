@@ -17,7 +17,7 @@
         <div class="lines-list">
           <div class="row">
             <% Line.where(category_id: category.id).each do |line| %>
-              <%= link_to products_path, remote: true do %>
+              <%= link_to products_path(:line => line), remote: true do %>
                 <div class="line-wrapper col-lg-6 col-md-6 col-sm-6 col-xs-12">
                   <div class="line-name">
                     <span class="line-name-span lead"><%= line.name %></span>
@@ -36,4 +36,4 @@
   </div><!-- /container -->
 </div><!-- /produtos -->
 
-<div class="modal fade" id="products-modal">lala</div>
+<div class="modal fade" id="products-modal"></div>
