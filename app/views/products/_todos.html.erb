@@ -1,42 +1,131 @@
-  <div class="modal-dialog modal-lg" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        
-		<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title">Linha <%= @line.name %></h4>
-      </div>
-      <div class="modal-body">
+<div class="modal-dialog modal-lg" role="document">
+  <div class="modal-content">
+    <div class="modal-header">
+      
+	<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+      <h4 class="modal-title">Linha <%= @line.name %></h4>
+    </div>
+    <div class="modal-body">
+    
+    <!-- /menu para small devices -->
+    <ul class="nav nav-pills nav-stacked">
+      <% @products.each_with_index do |product, index| %>
+        <li role="presentation" data-toggle="tab" class="<%= 'active' if index == 0 %>"><a href="#<%= product.id %>"><%= product.name %></a></li>
+      <% end %>
+    </ul>
 
-<div>
-
-  <!-- Nav tabs -->
-  <ul class="nav nav-tabs" role="tablist">
-  <% @products.each_with_index do |product, index| %>
-    <li role="presentation" class="<%= 'active' if index == 0 %>"><a href="#<%= product.id %>" aria-controls="home" role="tab" data-toggle="tab"><%= product.name %></a></li>
+    <!-- Nav tabs -->
+    <ul class="nav nav-tabs visible-lg visible-md">
+    <% @products.each_with_index do |product, index| %>
+      <li role="presentation" class="<%= 'active' if index == 0 %>"><a href="#<%= product.id %>" aria-controls="home" role="tab" data-toggle="tab">
+        <div class="product-thumb text-center">          
+          <%= image_tag product.image.url(:thumb), alt: product.name, class: 'img-rounded' %><br>
+          <span class="line-name-span lead"><%= product.name %></span>
+        </div><!-- /product-thumb -->
+        </a></li>
+      <% end %>
+    </ul>
+    <!-- Tab panes -->
+    <div class="tab-content">
+    <% @products.each_with_index do |product, index| %>
+      <div role="tabpanel" class="tab-pane fade in <%= 'active' if index == 0 %>" id="<%= product.id %>">
+        <%= image_tag product.image.url(:original), alt: product.name, class: 'img-responsive' %>
+        <%= product.description %>
+      </div><!-- /tabpanel -->
     <% end %>
-  </ul>
-
-  <!-- Tab panes -->
-  <div class="tab-content">
-  <% @products.each_with_index do |product, index| %>
-    <div role="tabpanel" class="tab-pane <%= 'active' if index == 0 %>" id="<%= product.id %>"><%= product.name %></div>
-  <% end %>
-  </div>
-
-</div>
-
-      	<hr>
-        <% @products.each do |product| %>
-		<li>Linha: #<%= product.line.id %>-<%= product.line.name %> ..... Produto: <%= product.name %></li>
-		<% end %>
-      </div>
-    </div><!-- /.modal-content -->
-  </div><!-- /.modal-dialog -->
+    </div>
+    </div>
+  </div><!-- /.modal-content -->
+</div><!-- /.modal-dialog -->
 
 <style type="text/css">
-	
+.product-thumb{
+  height: 70px;
+  border: 1px solid transparent;
+  font-family: 'Museo 700';
+}
+	.modal-content {
+    /*background-color: #CF2B2A;*/
+    border: 3px solid #fff;
+    
+  }
 	.modal-title{
 		color: #CF2B2A;
+    text-align: center;
+    font-size: 25px;
+    /*font-family: 'Museo 900';*/
 	}
 
+  .nav-tabs > li a {
+    outline: none;
+    color: #CF2B2A;
+}
+ 
+.nav-tabs > li.active > a,
+ 
+.nav-tabs > li.active > a:focus,
+ 
+.nav-tabs > li.active > a:hover{
+  /*background-color:#D6E6F3;
+  color:#000;
+  border: 1px solid #1A3E5E;
+  border-bottom-color: transparent;*/
+  color: #A51417;
+
+  }
+
+/*
+.nav-tabs{
+  background-color:#161616;
+}
+.tab-content{
+    background-color:#303136;
+    color:#fff;
+    padding:5px
+}
+.nav-tabs > li > a{
+  border: medium none;
+}
+.nav-tabs > li > a:hover{
+  background-color: #303136 !important;
+    border: medium none;
+    border-radius: 0;
+    color:#fff;
+}
+
+
+.tab-pane {
+ border:solid 1px #1A3E5E;
+ border-top: 0;
+ background-color:#D6E6F3;
+ padding:5px;
+}
+
+.nav-tabs{
+ border-color:#1A3E5E;
+}
+ 
+.nav-tabs > li a {
+border: 1px solid #1A3E5E;
+background-color:#2F71AB;
+color:#fff;
+}
+ 
+.nav-tabs > li.active > a,
+ 
+.nav-tabs > li.active > a:focus,
+ 
+.nav-tabs > li.active > a:hover{
+background-color:#D6E6F3;
+color:#000;
+border: 1px solid #1A3E5E;
+border-bottom-color: transparent;
+}
+
+.nav-tabs > li > a:hover{
+background-color: #D6E6F3 !important;
+
+color:#000;
+}
+*/
 </style>
