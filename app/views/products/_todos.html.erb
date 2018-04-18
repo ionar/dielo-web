@@ -7,24 +7,27 @@
     </div>
     <div class="modal-body">
     
-    <!-- /menu para small devices -->
-    <ul class="nav nav-pills nav-stacked">
-      <% @products.each_with_index do |product, index| %>
-        <li role="presentation" data-toggle="tab" class="<%= 'active' if index == 0 %>"><a href="#<%= product.id %>"><%= product.name %></a></li>
-      <% end %>
-    </ul>
+
 
     <!-- Nav tabs -->
     <ul class="nav nav-tabs visible-lg visible-md">
     <% @products.each_with_index do |product, index| %>
-      <li role="presentation" class="<%= 'active' if index == 0 %>"><a href="#<%= product.id %>" aria-controls="home" role="tab" data-toggle="tab">
+      <li class="<%= 'active' if index == 0 %>"><a href="#<%= product.id %>" aria-controls="home" role="tab" data-toggle="tab" data-target="#<%= product.id %>">
         <div class="product-thumb text-center">          
           <%= image_tag product.image.url(:thumb), alt: product.name, class: 'img-rounded' %><br>
-          <span class="line-name-span lead"><%= product.name %></span>
+          <span ><%= product.name %></span>
         </div><!-- /product-thumb -->
         </a></li>
       <% end %>
     </ul>
+
+        <!-- /menu para small devices -->
+    <ul class="nav nav-pills nav-stacked visible-xs visible-sm">
+      <% @products.each_with_index do |product, index| %>
+        <li role="tab" data-target="#<%= product.id %>" data-toggle="tab" class="<%= 'active' if index == 0 %>"><a href="#<%= product.id %>"><%= product.name %></a></li>
+      <% end %>
+    </ul>
+
     <!-- Tab panes -->
     <div class="tab-content">
     <% @products.each_with_index do |product, index| %>
@@ -39,40 +42,69 @@
 </div><!-- /.modal-dialog -->
 
 <style type="text/css">
+/*
+$vermelho-tema: #CF2B2A;
+$vermelho-escuro: #A51417;
+$vermelho-active: #EFAEAE;
+*/
 .product-thumb{
+  transform: rotate(5deg);
   height: 70px;
   border: 1px solid transparent;
   font-family: 'Museo 700';
-}
-	.modal-content {
-    /*background-color: #CF2B2A;*/
-    border: 3px solid #fff;
-    
-  }
-	.modal-title{
-		color: #CF2B2A;
-    text-align: center;
-    font-size: 25px;
-    /*font-family: 'Museo 900';*/
-	}
+  -webkit-transition: all 0.6s ease;
+  -moz-transition: all 0.6s ease;
+  -o-transition: all 0.6s ease;
+  transition: all 0.6s ease; 
 
-  .nav-tabs > li a {
-    outline: none;
-    color: #CF2B2A;
+
 }
- 
+.product-thumb:hover{
+  transform: rotate(-5deg);
+  -webkit-transition: all 0.6s ease;
+  -moz-transition: all 0.6s ease;
+  -o-transition: all 0.6s ease;
+  transition: all 0.6s ease;  
+}
+.modal-content {
+  border: 3px solid #A51417;
+  background: url('bg-conteudo.png') 0 0 repeat-x #fff;
+}
+.modal-title{
+	color: #CF2B2A;
+  text-align: center;
+  font-size: 25px;
+  font-family: 'Museo 900';
+}
+
+.nav-tabs > li a {
+  outline: none;
+  color: #CF2B2A;
+}
 .nav-tabs > li.active > a,
- 
 .nav-tabs > li.active > a:focus,
- 
 .nav-tabs > li.active > a:hover{
   /*background-color:#D6E6F3;
   color:#000;
   border: 1px solid #1A3E5E;
   border-bottom-color: transparent;*/
   color: #A51417;
+}
 
-  }
+.nav-pills > li a {
+    outline: none;
+    color: #CF2B2A;
+    font-family: 'Museo 700';
+}
+.nav-pills > li.active > a,
+.nav-pills > li.active > a:focus,
+.nav-pills > li.active > a:hover{
+  background-color:#CF2B2A;  
+  /*border: 1px solid #1A3E5E;
+  border-bottom-color: transparent;*/
+  /*color: #A51417;*/
+}
+
 
 /*
 .nav-tabs{
