@@ -70,3 +70,4 @@ gem 'mail_form'
 gem 'scrollreveal-rails'
 
 gem 'devise-bootstrap-views'
+gem 'redcarpet'

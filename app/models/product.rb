@@ -17,6 +17,7 @@ class Product < ApplicationRecord
 	    #configure :image do
 	    #  hide
 	    #end
+	    ##configure :description, :markdown
 
 	    list do
 	        field :image do

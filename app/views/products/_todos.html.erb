@@ -37,7 +37,7 @@
           <%= image_tag product.image.url(:original), alt: product.name, class: '' %>
         </div><!-- /product-image -->
         <div class="product-description lead"> 
-          <%= product.description %>
+          <%= markdown(product.description) %>
         </div><!-- /product-description -->
       </div><!-- /tabpanel -->
     <% end %>
@@ -77,6 +77,30 @@ $vermelho-active: #EFAEAE;
   color: #CF2B2A;
   text-align: center;
 }
+
+.product-description table, th, td {
+  padding: 5px;
+  border-collapse: collapse;
+  background-color: #CF2B2A;
+  color: #fff;
+}
+
+
+.product-description table, tr, td {
+  padding: 5px;
+  border-collapse: collapse;
+  background-color: #F3ECE0;
+  color: #875E4C;
+}
+
+.product-description table, tr{
+  border-bottom: 1px dotted #875E4C;
+}
+
+/*.product-description thead {
+  background-color: #CF2B2A;
+  color: #fff;
+}*/
 
 .modal-content {
   border: 3px solid #A51417;
