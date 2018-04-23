@@ -8,7 +8,7 @@ class Product < ApplicationRecord
  	validates_attachment_content_type :image_high, content_type: /\Aimage\/.*\z/
 
     validates :name, presence: true
-    validates :name, uniqueness: true
+    #validates :name, uniqueness: true
 
 
     scope :pertencentes_a_linha, -> (line) { where line: line }

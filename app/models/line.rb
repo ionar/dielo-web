@@ -13,9 +13,9 @@ class Line < ApplicationRecord
 	default_scope { order(name: :asc) }
 
     rails_admin do
-	    configure :image do
-	      hide
-	    end
+	    #configure :image do
+	    #  hide
+	    #end
 
 	    list do
 	        field :image do

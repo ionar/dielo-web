@@ -13,9 +13,10 @@
     <ul class="nav nav-tabs visible-lg visible-md">
     <% @products.each_with_index do |product, index| %>
       <li class="<%= 'active' if index == 0 %>"><a href="#<%= product.id %>" aria-controls="home" role="tab" data-toggle="tab" data-target="#<%= product.id %>">
-        <div class="product-thumb text-center">          
-          <%= image_tag product.image.url(:thumb), alt: product.name, class: 'img-rounded' %><br>
-          <span ><%= product.name %></span>
+        <div class="product-thumb text-center">   
+        <span ><%= product.name %></span><br>
+        <%= image_tag product.image.url(:thumb), alt: product.name, class: '' %>
+          
         </div><!-- /product-thumb -->
         </a></li>
       <% end %>
@@ -32,8 +33,12 @@
     <div class="tab-content">
     <% @products.each_with_index do |product, index| %>
       <div role="tabpanel" class="tab-pane fade in <%= 'active' if index == 0 %>" id="<%= product.id %>">
-        <%= image_tag product.image.url(:original), alt: product.name, class: 'img-responsive' %>
-        <%= product.description %>
+        <div class="product-image text-center">         
+          <%= image_tag product.image.url(:original), alt: product.name, class: '' %>
+        </div><!-- /product-image -->
+        <div class="product-description lead"> 
+          <%= product.description %>
+        </div><!-- /product-description -->
       </div><!-- /tabpanel -->
     <% end %>
     </div>
@@ -48,8 +53,8 @@ $vermelho-escuro: #A51417;
 $vermelho-active: #EFAEAE;
 */
 .product-thumb{
-  transform: rotate(5deg);
-  height: 70px;
+  transform: rotate(-5deg);
+  height: 100px;
   border: 1px solid transparent;
   font-family: 'Museo 700';
   -webkit-transition: all 0.6s ease;
@@ -60,12 +65,19 @@ $vermelho-active: #EFAEAE;
 
 }
 .product-thumb:hover{
-  transform: rotate(-5deg);
+  transform: rotate(5deg);
   -webkit-transition: all 0.6s ease;
   -moz-transition: all 0.6s ease;
   -o-transition: all 0.6s ease;
   transition: all 0.6s ease;  
 }
+
+.product-description{
+  font-family: 'Museo 700';
+  color: #CF2B2A;
+  text-align: center;
+}
+
 .modal-content {
   border: 3px solid #A51417;
   background: url('bg-conteudo.png') 0 0 repeat-x #fff;
