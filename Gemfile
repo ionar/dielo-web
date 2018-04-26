@@ -71,3 +71,5 @@ gem 'scrollreveal-rails'
 
 gem 'devise-bootstrap-views'
 gem 'redcarpet'
+
+gem 'ckeditor'

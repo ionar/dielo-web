@@ -19,6 +19,19 @@ class Product < ApplicationRecord
 	    #end
 	    ##configure :description, :markdown
 
+	    edit do
+	    	field :name
+	        field :line
+	        field :description
+  			field :nutrition_facts, :ck_editor
+  			field :image do
+	            pretty_value do
+	                bindings[:view].tag(:img, { :src => bindings[:object].image.url(:thumb), class: 'img-thumbnail' })
+	            end
+	        end
+
+		end
+
 	    list do
 	        field :image do
 	            pretty_value do

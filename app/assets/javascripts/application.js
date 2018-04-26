@@ -19,10 +19,16 @@
 
 //= require scrollReveal
 
+//= require ckeditor/init
+
 //= require_tree .
+
 
 //$(document).on("page:change", function() {
 $(document).on("turbolinks:load", function() {
+
+    //Froala Editor
+    //$('.froala-wysiwyged').froalaEditor();
 
     // ScrollReveal
     $(function() {
