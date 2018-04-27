@@ -10,7 +10,7 @@
 
 
     <!-- Nav tabs -->
-    <ul class="nav nav-tabs <%= 'visible-md visible-lg' if @products.length <= 5 %>">
+    <ul class="nav nav-tabs <%= 'hidden-xs hidden-sm hidden-md hidden-lg' if @products.length >= 5 %>">
     <% @products.each_with_index do |product, index| %>
       <li class="<%= 'active' if index == 0 %>"><a href="#<%= product.id %>" aria-controls="home" role="tab" data-toggle="tab" data-target="#<%= product.id %>">
         <div class="product-thumb text-center">   
