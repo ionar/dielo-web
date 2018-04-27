@@ -10,7 +10,7 @@
 
 
     <!-- Nav tabs -->
-    <ul class="nav nav-tabs visible-lg visible-md">
+    <ul class="nav nav-tabs <%= 'visible-md visible-lg' if @products.length <= 5 %>">
     <% @products.each_with_index do |product, index| %>
       <li class="<%= 'active' if index == 0 %>"><a href="#<%= product.id %>" aria-controls="home" role="tab" data-toggle="tab" data-target="#<%= product.id %>">
         <div class="product-thumb text-center">   
@@ -21,9 +21,8 @@
         </a></li>
       <% end %>
     </ul>
-
         <!-- /menu para small devices -->
-    <ul class="nav nav-pills nav-stacked visible-xs visible-sm">
+    <ul class="nav nav-pills nav-stacked visible-xs visible-sm <%= 'visible-md visible-lg' if @products.length >= 5 %>">
       <% @products.each_with_index do |product, index| %>
         <li role="tab" data-target="#<%= product.id %>" data-toggle="tab" class="<%= 'active' if index == 0 %>"><a href="#<%= product.id %>"><%= product.name %></a></li>
       <% end %>
