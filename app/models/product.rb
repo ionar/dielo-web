@@ -24,6 +24,7 @@ class Product < ApplicationRecord
 	        field :line
 	        field :description
   			field :nutrition_facts, :ck_editor
+  			field :allergenic
   			field :image do
 	            pretty_value do
 	                bindings[:view].tag(:img, { :src => bindings[:object].image.url(:thumb), class: 'img-thumbnail' })

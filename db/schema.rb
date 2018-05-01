@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180423190305) do
+ActiveRecord::Schema.define(version: 20180430165626) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -61,6 +61,7 @@ ActiveRecord::Schema.define(version: 20180423190305) do
     t.integer "image_high_file_size"
     t.datetime "image_high_updated_at"
     t.text "nutrition_facts"
+    t.text "allergenic"
     t.index ["line_id"], name: "index_products_on_line_id"
   end
 

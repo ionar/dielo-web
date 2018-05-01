@@ -32,14 +32,26 @@
     <div class="tab-content">
     <% @products.each_with_index do |product, index| %>
       <div role="tabpanel" class="tab-pane fade in <%= 'active' if index == 0 %>" id="<%= product.id %>">
+
         <div class="product-image text-center">         
           <%= image_tag product.image.url(:original), alt: product.name, class: '' %>
-        </div><!-- /product-image -->
-        <div class="product-description lead"> 
-          <%= markdown(product.description) %>
-          <%= raw(product.nutrition_facts) %>
-          
-        </div><!-- /product-description -->
+        </div><!-- /product-image -->                
+        <div class="row">
+          <div class="col-lg-6">
+            <div class="product-description lead text-center"> 
+              <%= markdown(product.description) %>
+            </div><!-- /product-description -->
+            <hr>
+            <div class="product-description lead"> 
+              <%= product.allergenic %>
+            </div><!-- /product-description -->            
+          </div><!-- /.col -->
+          <div class="col-lg-6">
+            <div class="product-description"> 
+              <%= raw(product.nutrition_facts) %>          
+            </div><!-- /product-description -->
+          </div><!-- /.col -->          
+        </div><!-- /.row -->
       </div><!-- /tabpanel -->
     <% end %>
     </div>
@@ -72,11 +84,13 @@ $vermelho-active: #EFAEAE;
   -o-transition: all 0.6s ease;
   transition: all 0.6s ease;  
 }
+.product-image{
+  padding: 20px;
+}
 
 .product-description{
   font-family: 'Museo 700';
   color: #CF2B2A;
-  text-align: center;
 }
 
 .product-description table, th, td {
@@ -84,6 +98,7 @@ $vermelho-active: #EFAEAE;
   border-collapse: collapse;
   background-color: #CF2B2A;
   color: #fff;
+  text-align: center;
 }
 
 
@@ -142,59 +157,4 @@ $vermelho-active: #EFAEAE;
   /*color: #A51417;*/
 }
 
-
-/*
-.nav-tabs{
-  background-color:#161616;
-}
-.tab-content{
-    background-color:#303136;
-    color:#fff;
-    padding:5px
-}
-.nav-tabs > li > a{
-  border: medium none;
-}
-.nav-tabs > li > a:hover{
-  background-color: #303136 !important;
-    border: medium none;
-    border-radius: 0;
-    color:#fff;
-}
-
-
-.tab-pane {
- border:solid 1px #1A3E5E;
- border-top: 0;
- background-color:#D6E6F3;
- padding:5px;
-}
-
-.nav-tabs{
- border-color:#1A3E5E;
-}
- 
-.nav-tabs > li a {
-border: 1px solid #1A3E5E;
-background-color:#2F71AB;
-color:#fff;
-}
- 
-.nav-tabs > li.active > a,
- 
-.nav-tabs > li.active > a:focus,
- 
-.nav-tabs > li.active > a:hover{
-background-color:#D6E6F3;
-color:#000;
-border: 1px solid #1A3E5E;
-border-bottom-color: transparent;
-}
-
-.nav-tabs > li > a:hover{
-background-color: #D6E6F3 !important;
-
-color:#000;
-}
-*/
 </style>
