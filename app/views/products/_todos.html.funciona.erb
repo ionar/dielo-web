@@ -7,45 +7,53 @@
     </div>
     <div class="modal-body">
     
-      <div class="row">
-        <div class="col-lg-3">
-          <ul class="nav nav-pills nav-stacked">
-            <% @products.each_with_index do |product, index| %>
-              <li role="tab" data-target="#<%= product.id %>" data-toggle="tab" class="text-center <%= 'active' if index == 0 %>"><a href="#<%= product.id %>">
-                <%= image_tag product.image.url(:thumb), alt: product.name, class: '' %><br>
-                <%= product.name %></a></li>
-            <% end %>
-          </ul>
-        </div><!-- /col -->
-        <div class="col-lg-9">
-          <!-- Tab panes -->
-          <div class="tab-content">
-          <% @products.each_with_index do |product, index| %>
-            <div role="tabpanel" class="tab-pane fade in <%= 'active' if index == 0 %>" id="<%= product.id %>">
 
-              <div class="product-image text-center">         
-                <%= image_tag product.image.url(:original), alt: product.name, class: '' %>
-              </div><!-- /product-image -->                
-              <div class="row">
-                <div class="col-lg-4">
-                  <div class="product-description text-center"> 
-                    <%= markdown(product.description) %>
-                  </div><!-- /product-description -->
-                  <hr>
-                  <div class="product-description"> 
-                    <%= product.allergenic %>
-                  </div><!-- /product-description -->            
-                </div><!-- /.col -->
-                <div class="col-lg-8">
-                  <div class="product-description"> 
-                    <%= raw(product.nutrition_facts) %>          
-                  </div><!-- /product-description -->
-                </div><!-- /.col -->          
-              </div><!-- /.row -->
-            </div><!-- /tabpanel -->
-          <% end %>          
-        </div><!-- /col -->
-      </div><!-- /row -->
+
+    <!-- Nav tabs -->
+    <ul class="nav nav-tabs visible-md visible-lg">
+    <% @products.each_with_index do |product, index| %>
+      <li class="<%= 'active' if index == 0 %>"><a href="#<%= product.id %>" aria-controls="home" role="tab" data-toggle="tab" data-target="#<%= product.id %>">
+        <div class="product-thumb text-center">   
+        <span ><%= raw(product.name) %></span><br>
+        <%= image_tag product.image.url(:thumb), alt: product.name, class: '' %>
+          
+        </div><!-- /product-thumb -->
+        </a></li>
+      <% end %>
+    </ul>
+        <!-- /menu para small devices -->
+    <ul class="nav nav-pills nav-stacked visible-xs visible-sm">
+      <% @products.each_with_index do |product, index| %>
+        <li role="tab" data-target="#<%= product.id %>" data-toggle="tab" class="<%= 'active' if index == 0 %>"><a href="#<%= product.id %>"><%= product.name %></a></li>
+      <% end %>
+    </ul>
+
+    <!-- Tab panes -->
+    <div class="tab-content">
+    <% @products.each_with_index do |product, index| %>
+      <div role="tabpanel" class="tab-pane fade in <%= 'active' if index == 0 %>" id="<%= product.id %>">
+
+        <div class="product-image text-center">         
+          <%= image_tag product.image.url(:original), alt: product.name, class: '' %>
+        </div><!-- /product-image -->                
+        <div class="row">
+          <div class="col-lg-6">
+            <div class="product-description lead text-center"> 
+              <%= markdown(product.description) %>
+            </div><!-- /product-description -->
+            <hr>
+            <div class="product-description lead"> 
+              <%= product.allergenic %>
+            </div><!-- /product-description -->            
+          </div><!-- /.col -->
+          <div class="col-lg-6">
+            <div class="product-description"> 
+              <%= raw(product.nutrition_facts) %>          
+            </div><!-- /product-description -->
+          </div><!-- /.col -->          
+        </div><!-- /.row -->
+      </div><!-- /tabpanel -->
+    <% end %>
     </div>
     </div>
   </div><!-- /.modal-content -->
