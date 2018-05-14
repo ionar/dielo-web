@@ -22,8 +22,10 @@
           <div class="tab-content">
           <% @products.each_with_index do |product, index| %>
             <div role="tabpanel" class="tab-pane fade in <%= 'active' if index == 0 %>" id="<%= product.id %>">
-
-              <div class="product-image text-center">         
+              <div class="product-image text-center">
+                <span class="product-titulo">
+                  <%= product.name %>
+                </span>
                 <%= image_tag product.image.url(:original), alt: product.name, class: '' %>
               </div><!-- /product-image -->                
               <div class="row">
@@ -57,6 +59,16 @@ $vermelho-tema: #CF2B2A;
 $vermelho-escuro: #A51417;
 $vermelho-active: #EFAEAE;
 */
+
+.product-titulo{
+  color: #fff;
+  background-color: #CF2B2A;
+  border-radius: 3px;
+  font-family: 'Museo 900';
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
 .product-thumb{
   transform: rotate(-5deg);
   height: 100px;
@@ -66,8 +78,6 @@ $vermelho-active: #EFAEAE;
   -moz-transition: all 0.6s ease;
   -o-transition: all 0.6s ease;
   transition: all 0.6s ease; 
-
-
 }
 .product-thumb:hover{
   transform: rotate(5deg);
