@@ -2,6 +2,7 @@ class WelcomeController < ApplicationController
   def index
     @banners = Banner.all
     @categories = Category.all
+    @partnership = Partnership.new
 
     # Formulario de contato  
     @contact = Welcome.new(params[:welcome])

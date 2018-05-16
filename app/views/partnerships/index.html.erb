@@ -1,0 +1,41 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Partnerships</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Cnpj</th>
+      <th>Kind</th>
+      <th>Address</th>
+      <th>City</th>
+      <th>Province</th>
+      <th>Email</th>
+      <th>Phone</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @partnerships.each do |partnership| %>
+      <tr>
+        <td><%= partnership.name %></td>
+        <td><%= partnership.cnpj %></td>
+        <td><%= partnership.kind %></td>
+        <td><%= partnership.address %></td>
+        <td><%= partnership.city %></td>
+        <td><%= partnership.province %></td>
+        <td><%= partnership.email %></td>
+        <td><%= partnership.phone %></td>
+        <td><%= link_to 'Show', partnership %></td>
+        <td><%= link_to 'Edit', edit_partnership_path(partnership) %></td>
+        <td><%= link_to 'Destroy', partnership, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Partnership', new_partnership_path %>

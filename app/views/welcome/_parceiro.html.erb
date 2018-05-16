@@ -1,12 +1,96 @@
 <!-- Seja um parceiro -->
 <div id="parceiro">
   <div class="container">
+    <div class="col-md-12" id="flash-message-partner">
+      <%= render 'partnerships/flash-partner' %>
+    </div><!-- /col -->    
     <%= scroll_reveal animation: 'enter bottom move 100px, after 1s' do %>
         <div class="titulo-wrapper text-center">
             <%= image_tag 'titulo-seja_um_parceiro.png', alt: 'Seja um parceiro' %>
         </div>
     <% end %>
         <h2 class="text-center">Tenha um freezer em seu estabelecimento</h2>
+        <div class="row">
+          <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+            Texto
+          </div><!-- /col -->
+          <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+            <%= simple_form_for(@partnership, url: partnerships_path, remote: true) do |f| %>
+              <%= f.error_notification %>
+<div class="row">
+              <div class="form-inputs col-lg-6">
+                <%= f.input :name, label: "Seu nome" %>
+              </div><!-- /col -->
+              <div class="form-inputs col-lg-6">
+                <%= f.input :cnpj,label: "Digite o CNPJ da sua empresa" %>
+              </div><!-- /col -->
+</div><!-- /row -->
+<div class="row">              
+              <div class="form-inputs col-lg-6">
+                <%= f.input :address,label: "Endereço da sua empresa", placeholder: "Rua, número, bairro" %>
+              </div><!-- /col -->
+              <div class="form-inputs col-lg-6">
+                <%= f.input :city, label: "Cidade" %>
+              </div><!-- /col -->
+              <div class="form-inputs col-lg-6">
+                <%= f.input :province, :collection => [
+                          ['AC','AC'],
+                          ['AL','AL'],
+                          ['AM','AM'],
+                          ['AP','AP'],
+                          ['BA','BA'],
+                          ['CE','CE'],
+                          ['DF','DF'],
+                          ['ES','ES'],
+                          ['GO','GO'],
+                          ['MA','MA'],
+                          ['MG','MG'],
+                          ['MS','MS'],
+                          ['MT','MT'],
+                          ['PA','PA'],
+                          ['PB','PB'],
+                          ['PE','PE'],
+                          ['PI','PI'],
+                          ['PR','PR'],
+                          ['RJ','RJ'],
+                          ['RN','RN'],
+                          ['RO','RO'],
+                          ['RR','RR'],
+                          ['RS','RS'],
+                          ['SC','SC'],
+                          ['SE','SE'],
+                          ['SP','SP'],
+                          ['TO','TO'],
+                          ['ESTRANGEIRO','ESTRANGEIRO'],
+                        ], prompt: t('select'), :label => "Estado" %>
+              </div><!-- /col -->
+</div><!-- /row -->
+<div class="row"> 
+            <div class="form-inputs col-lg-6">
+                <%= f.input :email,label: "Seu email" %>
+            </div><!-- /col -->
+            <div class="form-inputs col-lg-6">                
+                <%= f.input :phone, label: "Seu telefone" %>
+            </div><!-- /col -->
+</div><!-- /row -->           
+<div class="row"> 
+          <div class="form-inputs col-lg-12">
+            <%= f.input :kind, :collection => [
+                  ['Supermercado','Supermercado'],
+                  ['Padaria','Padaria'],
+                  ['Restaurante','Restaurante'],
+                  ['Outros','Outros']
+                  ], prompt: t('select'), :label => "Tipo de estabelecimento" %>
+
+          </div><!-- /col -->
+</div><!-- /row -->
+              <div class="form-actions">
+                <%= f.button :submit %>
+              </div>
+            <% end %>
+</div><!-- /row -->
+          </div><!-- /col -->
+        </div><!-- /row -->
   </div><!-- /container -->
   <div class="container-fluid">
     <div class="row">

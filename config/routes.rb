@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :partnerships
   get 'products/index'
 
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'

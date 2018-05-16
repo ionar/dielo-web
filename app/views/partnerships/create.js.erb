@@ -1,0 +1,15 @@
+// Test for ajax success
+console.log("This is the create.js.erb partnership file");
+// Render flash message
+
+$('#flash-message-partner').html("<%= j render 'flash-partner' %>");
+
+// Clear forms
+$('#partnership_name').val('');
+$('#partnership_cnpj').val('');
+$('#partnership_kind').val('');
+$('#partnership_address').val('');
+$('#partnership_city').val('');
+$('#partnership_province').val('');
+$('#partnership_email').val('');
+$('#partnership_phone').val('');
