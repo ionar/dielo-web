@@ -19,19 +19,40 @@
               <%= f.error_notification %>
 <div class="row">
               <div class="form-inputs col-lg-6">
+                <%= f.input :kind, :collection => [
+                      ['Supermercado','Supermercado'],
+                      ['Padaria','Padaria'],
+                      ['Restaurante','Restaurante'],
+                      ['Outros','Outros']
+                      ], prompt: t('select'), :label => "Tipo de estabelecimento" %>
+              </div><!-- /col -->
+              <div class="form-inputs col-lg-6">
+                <%= f.input :razao, label: "Razão Social" %>
+              </div><!-- /col -->
+</div><!-- /row -->
+<div class="row">
+              <div class="form-inputs col-lg-6">
                 <%= f.input :name, label: "Seu nome" %>
               </div><!-- /col -->
               <div class="form-inputs col-lg-6">
-                <%= f.input :cnpj,label: "Digite o CNPJ da sua empresa" %>
+                <%= f.input :cnpj,label: "CNPJ" %>
               </div><!-- /col -->
 </div><!-- /row -->
 <div class="row">              
               <div class="form-inputs col-lg-6">
-                <%= f.input :address,label: "Endereço da sua empresa", placeholder: "Rua, número, bairro" %>
+                <%= f.input :address,label: "Endereço da sua empresa", placeholder: "Rua, número" %>
               </div><!-- /col -->
+              <div class="form-inputs col-lg-3">
+                <%= f.input :neighborhood,label: "Bairro" %>
+              </div><!-- /col -->              
+              <div class="form-inputs col-lg-3">
+                <%= f.input :cep, label: "Cep" %>
+              </div><!-- /col -->
+</div><!-- /row -->              
+<div class="row">
               <div class="form-inputs col-lg-6">
                 <%= f.input :city, label: "Cidade" %>
-              </div><!-- /col -->
+              </div><!-- /col -->              
               <div class="form-inputs col-lg-6">
                 <%= f.input :province, :collection => [
                           ['AC','AC'],
@@ -64,7 +85,8 @@
                           ['ESTRANGEIRO','ESTRANGEIRO'],
                         ], prompt: t('select'), :label => "Estado" %>
               </div><!-- /col -->
-</div><!-- /row -->
+          
+</div><!-- /row -->              
 <div class="row"> 
             <div class="form-inputs col-lg-6">
                 <%= f.input :email,label: "Seu email" %>
@@ -73,21 +95,12 @@
                 <%= f.input :phone, label: "Seu telefone" %>
             </div><!-- /col -->
 </div><!-- /row -->           
-<div class="row"> 
-          <div class="form-inputs col-lg-12">
-            <%= f.input :kind, :collection => [
-                  ['Supermercado','Supermercado'],
-                  ['Padaria','Padaria'],
-                  ['Restaurante','Restaurante'],
-                  ['Outros','Outros']
-                  ], prompt: t('select'), :label => "Tipo de estabelecimento" %>
 
-          </div><!-- /col -->
-</div><!-- /row -->
-              <div class="form-actions">
-                <%= f.button :submit %>
-              </div>
-            <% end %>
+<div class="row">
+          <div class="form-actions">
+            <%= f.button :submit, label: "Enviar" %>
+          </div>
+    <% end %>
 </div><!-- /row -->
           </div><!-- /col -->
         </div><!-- /row -->
