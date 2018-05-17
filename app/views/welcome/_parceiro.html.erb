@@ -1,9 +1,6 @@
 <!-- Seja um parceiro -->
 <div id="parceiro">
-  <div class="container">
-    <div class="col-md-12" id="flash-message-partner">
-      <%= render 'partnerships/flash-partner' %>
-    </div><!-- /col -->    
+  <div class="container">   
     <%= scroll_reveal animation: 'enter bottom move 100px, after 1s' do %>
         <div class="titulo-wrapper text-center">
             <%= image_tag 'titulo-seja_um_parceiro.png', alt: 'Seja um parceiro' %>
@@ -17,7 +14,11 @@
           <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
             <%= simple_form_for(@partnership, url: partnerships_path, remote: true) do |f| %>
               <%= f.error_notification %>
+    <div class="col-md-12" id="flash-message-partner">
+      <%= render 'partnerships/flash-partner' %>
+    </div><!-- /col --> 
 <div class="row">
+
               <div class="form-inputs col-lg-6">
                 <%= f.input :kind, :collection => [
                       ['Supermercado','Supermercado'],
@@ -97,8 +98,10 @@
 </div><!-- /row -->           
 
 <div class="row">
-          <div class="form-actions">
-            <%= f.button :submit, label: "Enviar" %>
+          <div class="form-actions col-lg-12 margem-bottom">
+            <%= button_tag(type: 'submit', class: "btn btn-default") do %>
+              <span class="glyphicon glyphicon-floppy-disk"></span> Enviar pré-cadastro
+            <% end %>
           </div>
     <% end %>
 </div><!-- /row -->
