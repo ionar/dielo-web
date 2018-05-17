@@ -9,7 +9,8 @@ class Product < ApplicationRecord
 
     validates :name, presence: true
     #validates :name, uniqueness: true
-
+	
+	default_scope { order(order: :asc) }
 
     scope :pertencentes_a_linha, -> (line) { where line: line }
 
@@ -23,6 +24,7 @@ class Product < ApplicationRecord
 	    	field :name
 	        field :line
 	        field :description
+	        field :order
   			field :nutrition_facts, :ck_editor
   			field :allergenic
   			field :image do
@@ -41,6 +43,7 @@ class Product < ApplicationRecord
 	        end
 	        field :name
 	        field :line
+	        field :order
 	    end
 	    show do
 	        field :image do
@@ -50,6 +53,7 @@ class Product < ApplicationRecord
 	        end
 	        field :name
 	        field :line
+	        field :order
 	    end
 	end
 
