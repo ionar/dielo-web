@@ -1,12 +1,12 @@
 <div class="modal-dialog modal-lg" role="document">
   <div class="modal-content">
     <div class="modal-header">
-      
+
 	<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
       <h4 class="modal-title">Linha <%= @line.name %></h4>
     </div>
     <div class="modal-body">
-    
+
       <div class="row">
         <div class="col-lg-3">
           <ul class="nav nav-pills nav-stacked">
@@ -27,25 +27,25 @@
                   <%= product.name %>
                 </span><br>
                 <%= image_tag product.image.url(:original), alt: product.name, class: '' %>
-              </div><!-- /product-image -->                
+              </div><!-- /product-image -->
               <div class="row">
                 <div class="col-lg-6">
-                  <div class="product-description text-center"> 
+                  <div class="product-description text-center">
                     <%= markdown(product.description) %>
                   </div><!-- /product-description -->
                   <hr>
-                  <div class="product-description"> 
-                    <%= product.allergenic %>
-                  </div><!-- /product-description -->            
+                  <div class="product-description">
+                    <%= raw(product.allergenic) %>
+                  </div><!-- /product-description -->
                 </div><!-- /.col -->
                 <div class="col-lg-6">
-                  <div class="product-description"> 
-                    <%= raw(product.nutrition_facts) %>          
+                  <div class="product-description">
+                    <%= raw(product.nutrition_facts) %>
                   </div><!-- /product-description -->
-                </div><!-- /.col -->          
+                </div><!-- /.col -->
               </div><!-- /.row -->
             </div><!-- /tabpanel -->
-          <% end %>          
+          <% end %>
         </div><!-- /col -->
       </div><!-- /row -->
     </div>
@@ -77,14 +77,14 @@ $vermelho-active: #EFAEAE;
   -webkit-transition: all 0.6s ease;
   -moz-transition: all 0.6s ease;
   -o-transition: all 0.6s ease;
-  transition: all 0.6s ease; 
+  transition: all 0.6s ease;
 }
 .product-thumb:hover{
   transform: rotate(5deg);
   -webkit-transition: all 0.6s ease;
   -moz-transition: all 0.6s ease;
   -o-transition: all 0.6s ease;
-  transition: all 0.6s ease;  
+  transition: all 0.6s ease;
 }
 .product-image{
   padding: 20px;
@@ -154,7 +154,7 @@ $vermelho-active: #EFAEAE;
 .nav-pills > li.active > a,
 .nav-pills > li.active > a:focus,
 .nav-pills > li.active > a:hover{
-  background-color:#CF2B2A;  
+  background-color:#CF2B2A;
   /*border: 1px solid #1A3E5E;
   border-bottom-color: transparent;*/
   /*color: #A51417;*/
