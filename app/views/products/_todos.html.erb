@@ -30,11 +30,11 @@
               </div><!-- /product-image -->
               <div class="row">
                 <div class="col-lg-6">
-                  <div class="product-description text-center">
+                  <div class="product-description lead">
                     <%= markdown(product.description) %>
                   </div><!-- /product-description -->
                   <hr>
-                  <div class="product-description">
+                  <div class="product-description-allergenic">
                     <%= raw(product.allergenic) %>
                   </div><!-- /product-description -->
                 </div><!-- /.col -->
@@ -93,6 +93,12 @@ $vermelho-active: #EFAEAE;
 .product-description{
   font-family: 'Museo 700';
   color: #CF2B2A;
+}
+
+.product-description-allergenic{
+    font-family: 'Museo 700';
+    color: #D84242;
+    font-size: 10px;
 }
 
 .product-description table, th, td {
