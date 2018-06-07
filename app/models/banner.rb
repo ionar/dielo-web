@@ -7,9 +7,9 @@ class Banner < ApplicationRecord
   default_scope { order(sequence: :asc) }
 
   rails_admin do
-    configure :image do
-      hide
-    end
+    #configure :image do
+    #  hide
+    #end
 
     edit do
         field :image do
