@@ -10,13 +10,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180517165941) do
+ActiveRecord::Schema.define(version: 20180607195746) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "banners", force: :cascade do |t|
-    t.string "image"
     t.string "link"
     t.integer "sequence"
     t.datetime "created_at", null: false
@@ -36,7 +35,6 @@ ActiveRecord::Schema.define(version: 20180517165941) do
   create_table "lines", force: :cascade do |t|
     t.bigint "category_id"
     t.string "name"
-    t.string "image"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "image_file_name"

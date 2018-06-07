@@ -41,5 +41,4 @@ class Banner < ApplicationRecord
     end
 
   end
-
 end
