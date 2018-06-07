@@ -58,12 +58,13 @@ ul.nav.navbar-nav.nav-social {
 .navbar-header{
 	height: 100px;
 }
-.navbar-toggle {
+#nav-menu .navbar-header .navbar-toggle {
     border-radius: 100%;
     height: 44px;
     width: 44px;
     text-align: center;
     margin-top: 25px;
+    color: #fff;
 }
 
 #nav-menu {
@@ -122,12 +123,14 @@ ul.nav.navbar-nav.nav-social {
     height: 30px;
     border-radius: 100%;
     line-height: 30px;
+
 }
 #nav-menu .navbar-nav>li>a i:hover {
     background:#ff0000;
 }
 #nav-menu .navbar-nav.nav-social li>a{
 	padding: 35px 5px;
+
 
 }
 #nav-menu .navbar-nav>.active>a, #nav-menu .navbar-nav>.active>a:focus, #nav-menu .navbar-nav>.active>a:hover {
