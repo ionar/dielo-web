@@ -1,0 +1,44 @@
+#scroll-menu-wrapper{
+	position: fixed;
+	width: 100%;
+	display: none;
+	background: $vermelho-escuro;
+	margin: 0;
+	box-shadow: 1px 1px 10px #911111;
+	-webkit-box-shadow: 1px 1px 10px #911111;
+	-moz-box-shadow: 1px 1px 10px #911111;	
+	z-index: 1100;
+}
+
+#scroll-menu {
+    /*border-color: $vermelho-tema;*/
+    border-color: transparent;
+    border-radius: 0;
+    margin-bottom:0;
+
+}
+
+#scroll-menu .navbar-toggle:focus, #scroll-menu .navbar-toggle:hover{
+	background-color: $vermelho-tema;
+}
+
+#scroll-menu .navbar-toggle:focus  .icon-bar , #scroll-menu .navbar-toggle:hover  .icon-bar {
+	background-color: #fff;
+}
+#scroll-menu .navbar-nav>li>a{
+	font-family: 'Museo 900';
+	color: #fff;
+	text-transform: uppercase;
+	font-size: 14px;
+	padding-top: 40px;
+    padding-bottom: 40px;
+	-webkit-transition: .4s;
+    -moz-transition: .4s;
+    -ms-transition: .4s;
+	-o-transition: .4s;
+	transition: .4s;
+}
+
+#scroll-menu .navbar-nav>li>a:hover{
+	color:$vermelho-tema;
+}

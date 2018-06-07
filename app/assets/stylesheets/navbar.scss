@@ -5,7 +5,7 @@
 }
 
 @media (min-width: $screen-sm) {
-	.menu-circle{
+	#nav-menu .navbar-collapse .menu-circle{
 		border: 1px solid #fff;
 		-moz-border-radius:15px;
 		-webkit-border-radius:15px;
@@ -15,7 +15,7 @@
 
 /* Quando ocorre o colapse */
 @media (max-width: $screen-sm){
-	.navbar .container {
+	#nav-menu .container {
 		border: 1px solid #fff;
 		-moz-border-radius:15px;
 		-webkit-border-radius:15px;
@@ -65,22 +65,23 @@ ul.nav.navbar-nav.nav-social {
     text-align: center;
     margin-top: 25px;
 }
-.navbar-default {
+
+#nav-menu {
     /*border-color: $vermelho-tema;*/
     border-color: transparent;
     border-radius: 0;
 
 }
-.navbar-default .navbar-toggle .icon-bar {
+#nav-menu .navbar-toggle .icon-bar {
     background-color: #fff;
 }
-.navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover{
+#nav-menu .navbar-toggle:focus, #nav-menu .navbar-toggle:hover{
 	background-color: $vermelho-escuro;
 }
-.navbar-default .navbar-toggle:focus  .icon-bar , .navbar-default .navbar-toggle:hover  .icon-bar {
+#nav-menu .navbar-toggle:focus  .icon-bar , #nav-menu .navbar-toggle:hover  .icon-bar {
 	background-color: #fff;
 }
-.navbar-default .navbar-nav>li>a{
+#nav-menu .navbar-nav>li>a{
 	font-family: 'Museo 900';
 	color: #fff;
 	text-transform: uppercase;
@@ -94,26 +95,26 @@ ul.nav.navbar-nav.nav-social {
 	transition: .4s;
 }
 
-.navbar-default .navbar-nav>li>.dropdown-menu {
+#nav-menu .navbar-nav>li>.dropdown-menu {
 	background-color: $vermelho-escuro;
 }
 /*teste*/
-.navbar-default .navbar-nav .dropdown>a:focus {
+#nav-menu .navbar-nav .dropdown>a:focus {
 	background-color: $vermelho-escuro;
 	color: #fff;
 }
 /* */
 
-.navbar-default .navbar-nav>li>.dropdown-menu li a {
+#nav-menu .navbar-nav>li>.dropdown-menu li a {
 	font-family: 'Museo 700';
 	text-transform: uppercase;
 	color: #fff;
 }
-.navbar-default .navbar-nav>li>.dropdown-menu li a:hover {
+#nav-menu .navbar-nav>li>.dropdown-menu li a:hover {
 	color: $vermelho-escuro;
 }
 
-.navbar-default .navbar-nav>li>a i {
+#nav-menu .navbar-nav>li>a i {
     background: #fff;
     color: #004a98;
     width: 30px;
@@ -122,18 +123,18 @@ ul.nav.navbar-nav.nav-social {
     border-radius: 100%;
     line-height: 30px;
 }
-.navbar-default .navbar-nav>li>a i:hover {
+#nav-menu .navbar-nav>li>a i:hover {
     background:#ff0000;
 }
-.navbar-default .navbar-nav.nav-social li>a{
+#nav-menu .navbar-nav.nav-social li>a{
 	padding: 35px 5px;
 
 }
-.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover {
+#nav-menu .navbar-nav>.active>a, #nav-menu .navbar-nav>.active>a:focus, #nav-menu .navbar-nav>.active>a:hover {
     color: $vermelho-active;
     background-color: transparent;
 }
-.navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-nav>li>a:hover,.navbar-nav>li.current-menu-item a {
+#nav-menu .navbar-nav>li>a:focus, #nav-menu .navbar-nav>li>a:hover,.navbar-nav>li.current-menu-item a {
     color: $vermelho-escuro;
 }
 .pesquisa .input-group-btn {
@@ -179,26 +180,26 @@ button.btn.btn-default:hover {
 }	
 
 @media (max-width: 330px){
-	.navbar-default .navbar-brand{
+	#nav-menu .navbar-brand{
 		width: 70%;
 	}
-	.navbar-default .navbar-brand img {
+	#nav-menu .navbar-brand img {
     width: 100%;
     margin-top: 11px;
 	}
 }
 
 @media (max-width: $screen-sm){
-	.navbar-default .navbar-nav>li>a{
+	#nav-menu .navbar-nav>li>a{
 		font-size: 16px;
 		padding-top: 10px;
 	    padding-bottom: 10px;
 	}
 	
-	.navbar-default .navbar-nav>li>.dropdown-menu li a {
+	#nav-menu .navbar-nav>li>.dropdown-menu li a {
 		color: #fff !important;
 	}
-	.navbar-default .navbar-nav>li>.dropdown-menu li a:hover {
+	#nav-menu .navbar-nav>li>.dropdown-menu li a:hover {
 		color: $vermelho-active !important;
 	}
 }
