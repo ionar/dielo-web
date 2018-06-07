@@ -16,6 +16,15 @@ class Line < ApplicationRecord
 	    #configure :image do
 	    #  hide
 	    #end
+	    edit do
+	        field :image do
+	            pretty_value do
+	                bindings[:view].tag(:img, { :src => bindings[:object].image.url(:thumb) })
+	            end
+	        end
+	        field :name
+	        field :category
+	    end
 
 	    list do
 	        field :image do
