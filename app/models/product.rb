@@ -4,7 +4,7 @@ class Product < ApplicationRecord
   	has_attached_file :image, styles: { medium: "300x300>", thumb: "100x100>" }, default_url: "/images/:style/missing.jpg"
  	validates_attachment_content_type :image, content_type: /\Aimage\/.*\z/
 
- 	has_attached_file :image_high, styles: { medium: "300x300>", thumb: "100x100>" }, default_url: "/images/:style/missing.jpg"
+ 	has_attached_file :image_high, styles: { thumb: "100x100>" }, default_url: "/images/:style/missing.jpg"
  	validates_attachment_content_type :image_high, content_type: /\Aimage\/.*\z/
 
     validates :name, presence: true
@@ -32,6 +32,11 @@ class Product < ApplicationRecord
 	                bindings[:view].tag(:img, { :src => bindings[:object].image.url(:thumb), class: 'img-thumbnail' })
 	            end
 	        end
+  			field :image_high do
+	            pretty_value do
+	                bindings[:view].tag(:img, { :src => bindings[:object].image_high.url(:thumb), class: 'img-thumbnail' })
+	            end
+	        end	        
 
 		end
 

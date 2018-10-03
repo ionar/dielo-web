@@ -27,6 +27,9 @@
                   <%= product.name %>
                 </span><br>
                 <%= image_tag product.image.url(:original), alt: product.name, class: '' %>
+                  <div class="product-description-download">
+                    <%= link_to 'Baixar imagem em alta resolução', product.image_high.url, download: product.image_high.original_filename  if product.image_high.exists? %>
+                  </div><!-- /product-description --> 
               </div><!-- /product-image -->
               <div class="row">
                 <div class="col-lg-6">
@@ -36,7 +39,7 @@
                   <hr>
                   <div class="product-description-allergenic">
                     <%= raw(product.allergenic) %>
-                  </div><!-- /product-description -->
+                  </div><!-- /product-description -->                 
                 </div><!-- /.col -->
                 <div class="col-lg-6">
                   <div class="product-description">
@@ -93,6 +96,12 @@ $vermelho-active: #EFAEAE;
 .product-description{
   font-family: 'Museo 700';
   color: #CF2B2A;
+}
+
+.product-description-download a {
+  font-family: 'Museo 700';
+  color: #666;
+  font-size: 10px;
 }
 
 .product-description-allergenic{
