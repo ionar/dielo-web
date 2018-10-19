@@ -41,18 +41,18 @@
             <div class="col-md-4">
                 <%= form_for @contact, url: welcome_index_path, remote: true do |f| %>
                     <div class="form-group">
-                        <%= f.label :name, 'Seu nome:' %></br>
-                        <%= f.text_field  :name, required: true, class: "form-control" %></br>
+                        <%= f.label :name, 'Seu nome:' %><br>
+                        <%= f.text_field  :name, required: true, class: "form-control" %><br>
                     </div><!-- /form-group -->
 
                     <div class="form-group">
-                        <%= f.label :email, 'Seu email:' %></br>
-                        <%= f.text_field :email, required: true, class: "form-control" %></br>
+                        <%= f.label :email, 'Seu email:' %><br>
+                        <%= f.text_field :email, required: true, class: "form-control" %><br>
                     </div><!-- /form-group -->
 
                     <div class="form-group">
-                        <%= f.label :message, 'Mensagem' %></br>
-                        <%= f.text_area :message, rows: 8, cols: 40, required: true, class: "form-control", placeholder: "Digite uma mensagem para nós"%></br>
+                        <%= f.label :message, 'Mensagem' %><br>
+                        <%= f.text_area :message, rows: 8, cols: 40, required: true, class: "form-control", placeholder: "Digite uma mensagem para nós"%><br>
                     </div><!-- /form-group -->
                 <div class= "hidden">
                     <%= f.label :nickname %>
