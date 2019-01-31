@@ -1,6 +1,6 @@
 class Partnership < ApplicationRecord
 	validates :name, :cnpj, :kind, :address, :city, :province, :email, :phone, :razao, :cep, :neighborhood, presence: true
-
+=begin
 rails_admin do
 		show do
 	        field :name {label {"Nome"}}
@@ -33,5 +33,6 @@ rails_admin do
 	        
 		end		
 	end	
+=end
 
 end
