@@ -73,3 +73,4 @@ gem 'devise-bootstrap-views'
 gem 'redcarpet'
 
 gem 'ckeditor'
+gem 'serviceworker-rails'

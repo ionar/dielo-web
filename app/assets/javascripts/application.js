@@ -95,4 +95,4 @@ $(document).on("turbolinks:load", function() {
     },1200);
   });
 
-});
+});//= require serviceworker-companion

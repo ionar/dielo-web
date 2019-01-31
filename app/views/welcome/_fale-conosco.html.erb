@@ -51,8 +51,13 @@
                     </div><!-- /form-group -->
 
                     <div class="form-group">
+                        <%= f.label :fone, 'Seu telefone:' %><br>
+                        <%= f.text_field :fone, required: true, class: "form-control" %><br>
+                    </div><!-- /form-group -->                    
+
+                    <div class="form-group">
                         <%= f.label :message, 'Mensagem' %><br>
-                        <%= f.text_area :message, rows: 8, cols: 40, required: true, class: "form-control", placeholder: "Digite uma mensagem para nós"%><br>
+                        <%= f.text_area :message, rows: 4, cols: 40, required: true, class: "form-control", placeholder: "Digite uma mensagem para nós"%><br>
                     </div><!-- /form-group -->
                 <div class= "hidden">
                     <%= f.label :nickname %>
