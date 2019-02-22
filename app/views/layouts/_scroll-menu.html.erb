@@ -16,9 +16,9 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li><a href="#produtos">Produtos</a></li>
-        <li><a href="#quem-somos">Quem somos</a></li>
-        <li><a href="#onde-encontrar">Onde Encontrar</a></li>
+        <li><%= link_to 'Produtos', products_path %></li>
+        <li><%= link_to 'Quem somos', page_path('quem-somos') %></li>
+        <li><%= link_to 'Onde encontrar', page_path('onde-encontrar') %></li>
         <li class="hidden-sm"><a href="#parceiro">Seja um parceiro</a></li>
         <li><a href="#fale-conosco">Fale conosco</a></li>
       </ul>

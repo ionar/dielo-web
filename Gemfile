@@ -74,3 +74,4 @@ gem 'redcarpet'
 
 gem 'ckeditor'
 gem 'serviceworker-rails'
+gem 'high_voltage', '~> 3.1'

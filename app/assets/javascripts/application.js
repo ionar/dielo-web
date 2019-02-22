@@ -86,6 +86,7 @@ $(document).on("turbolinks:load", function() {
   window.addEventListener("scroll", parallax, false);
 // fim parallax
 
+/*
   //Efeito scrollTo
   $("nav").find("a").click(function(e) {
     e.preventDefault();
@@ -94,5 +95,5 @@ $(document).on("turbolinks:load", function() {
         scrollTop: $(section).offset().top
     },1200);
   });
-
+*/
 });//= require serviceworker-companion

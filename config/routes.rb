@@ -10,5 +10,6 @@ Rails.application.routes.draw do
   root 'welcome#index'
   resources :welcome, only: [:index, :new, :create]
 
-  resources :products, only: [:index]
+  resources :products, only: [:index, :show]
+  resources :lines, only: [:show]
 end

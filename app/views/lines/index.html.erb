@@ -1,0 +1,23 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Lines</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>line</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @lines.each do |line| %>
+      <tr>
+        <td><%= link_to 'Show', line %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Line', new_line_path %>

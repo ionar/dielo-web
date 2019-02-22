@@ -11,6 +11,9 @@ class Line < ApplicationRecord
 
 
 	default_scope { order(name: :asc) }
+	def to_param
+    	[id, name.parameterize].join("-")
+	end
 
     rails_admin do
 	    #configure :image do
