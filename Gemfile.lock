@@ -294,6 +294,7 @@ DEPENDENCIES
   coffee-rails (~> 4.2)
   devise
   devise-bootstrap-views
+  font-awesome-rails
   high_voltage (~> 3.1)
   jbuilder (~> 2.5)
   jquery-rails

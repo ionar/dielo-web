@@ -1,22 +1,18 @@
-<p id="notice"><%= notice %></p>
-<%= @line.name %>
+<div class="container">
+	<%= @line.name %>
 
+<% @line.products.each do |product| %>
+	<%= link_to product do %>
+	    <div class="line-wrapperX col-lg-6 col-md-6 col-sm-6 col-xs-12">
+	      <div class="line-nameX">
+	        <span class="line-name-spanX lead"><%= product.name %></span>
+	      </div><!-- /line-name -->
+	      <div class="line-photo">
+	        <%# image_tag line.image.url(:original), alt: line.name, class: 'img-responsive' %>
+	      </div><!-- /line-photo" -->
+	    </div><!-- /line-wrapper -->
+	<% end %>
+<% end %>
 
-
-
-
-<% Product.where(line_id: @line.id).each do |product| %>
-              <%= link_to product do %>
-                <div class="line-wrapper col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                  <div class="line-name">
-                    <span class="line-name-span lead"><%= product.name %></span>
-                  </div><!-- /line-name -->
-                  <div class="line-photo">
-                    <%# image_tag line.image.url(:original), alt: line.name, class: 'img-responsive' %>
-                  </div><!-- /line-photo" -->
-                </div><!-- /line-wrapper -->
-              <% end %>
-            <% end %>
-
-
+</div>
 

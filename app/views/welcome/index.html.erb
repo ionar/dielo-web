@@ -46,7 +46,17 @@
   </a>
 </div> <!-- Carousel -->
 
-<%= render partial: 'products' %>
+
+<div id="parallax">
+  <div id="layer_1" class="img-parallax visible-lg visible-md "></div>
+  <div id="layer_2" class="img-parallax visible-lg visible-md visible-sm visible-xs"></div>
+  <div id="layer_3" class="img-parallax visible-lg visible-md"></div>
+  <div id="layer_4" class="img-parallax visible-lg visible-md visible-sm visible-xs"></div>
+  <div id="layer_5" class="img-parallax hidden-xs"></div>
+  <div id="layer_6" class="img-parallax"></div>
+  <div id="layer_7" class="img-parallax"></div>
+</div><!-- /#parallax -->
+<%# render partial: 'products' %>
 <%# render partial: 'quem-somos' %>
 <%# render partial: 'onde-encontrar' %>
 <%= render partial: 'parceiro' %>

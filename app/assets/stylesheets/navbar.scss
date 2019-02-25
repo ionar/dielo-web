@@ -1,7 +1,17 @@
 #nav-wrapper{
-	top: 20px;
-	position: absolute;
-	width: 100%;
+ 	width: 100%;
+	background: image-url('bg-bolinha.jpg');
+	background-color: $vermelho-tema;
+ 	//height: 663px;
+ 	//min-height: 100px;
+	padding-top: 0;
+	padding-bottom: 0;
+	//overflow: hidden;
+	//transform: translate3d(0,0,0);
+	box-shadow: 0px -18px 19px 3px rgba(0,0,0,0.4) inset;
+	-webkit-box-shadow: 0px -18px 19px 3px rgba(0,0,0,0.4) inset;
+	-moz-box-shadow: 0px -18px 19px 3px rgba(0,0,0,0.4) inset;
+	margin: 0;
 }
 
 @media (min-width: $screen-sm) {
@@ -36,6 +46,7 @@ nav.navbar {
     background: transparent;
 	min-height: 100px;
 	z-index: 1000;
+	margin: 0 !important;
 }
 
 /*
@@ -116,17 +127,22 @@ ul.nav.navbar-nav.nav-social {
 }
 
 #nav-menu .navbar-nav>li>a i {
-    background: #fff;
-    color: #004a98;
+    //background: #fff;
+    color: #fff;
     width: 30px;
     text-align: center;
     height: 30px;
-    border-radius: 100%;
+    //border-radius: 100%;
     line-height: 30px;
 
 }
 #nav-menu .navbar-nav>li>a i:hover {
-    background:#ff0000;
+    color: $vermelho-escuro;
+    -webkit-transition: .4s;
+    -moz-transition: .4s;
+    -ms-transition: .4s;
+	-o-transition: .4s;
+	transition: .4s;
 }
 #nav-menu .navbar-nav.nav-social li>a{
 	padding: 35px 5px;
