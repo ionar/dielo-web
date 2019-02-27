@@ -21,10 +21,10 @@
         <li><%= link_to 'Produtos', products_path %></li>
         <li><%= link_to 'Quem somos', page_path('quem-somos') %></li>
         <li><%= link_to 'Onde encontrar', page_path('onde-encontrar') %></li>
-        <li class="hidden-sm"><a href="#parceiro">Seja um parceiro</a></li>
-        <li><a href="#fale-conosco">Fale conosco</a></li>
+        <li class="hidden-sm"><%= link_to 'Seja um parceiro', partnerships_path %></li>
+        <li><%= link_to 'Fale conosco', contacts_path %></li>
       </ul>
-      <ul class="nav navbar-nav navbar-right">
+      <ul class="nav navbar-nav navbar-right hidden-md hidden-sm">
         <li><a href="https://www.facebook.com/dielosorvetes/"><%= fa_icon "facebook-square", class: "fa-2x" %></a></li>
         <li><a href="https://www.instagram.com/dielosorvetes/"><%= fa_icon "instagram", class: "fa-2x" %></a></li>
       </ul>

@@ -31,13 +31,13 @@ $vermelho-active: #EFAEAE;
  @import "full-slider";
  @import "flash-messages";
  @import "products";
- @import "fale-conosco";
- @import "parceiro";
+ @import "contacts";
+ @import "partnerships";
  @import "quem-somos";
  @import "onde-encontrar";
  @import "todos";
  @import "devise_bootstrap_views";
- @import "scroll-menu";
+ /*@import "scroll-menu";*/
  @import "font-awesome";
 
 
@@ -79,14 +79,14 @@ font-feature-settings: 'liga';
 -moz-font-feature-settings: 'liga';
 -o-font-feature-settings: 'liga';
 }
-
+/*
 .container { 
   -webkit-transition: all 1s ease;
   -moz-transition: all 1s ease;
   -o-transition: all 1s ease;
   transition: all 1s ease;	
 }
-
+*/
 h1,h2,h3,h4,h5 {
 	font-family: 'Museo 900';
 	font-weight: normal;

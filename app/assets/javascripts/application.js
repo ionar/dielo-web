@@ -21,6 +21,8 @@
 
 //= require ckeditor/init
 
+//= require serviceworker-companion
+
 //= require_tree .
 
 
@@ -39,10 +41,10 @@ $(document).on("turbolinks:load", function() {
     $(window).scroll(function(){
       if ($(this).scrollTop() > 500) { 
         $('.scrollup_fade').fadeIn();
-        $('#scroll-menu-wrapper').fadeIn();
+        //$('#scroll-menu-wrapper').fadeIn();
       } else {
       $('.scrollup_fade').fadeOut();
-      $('#scroll-menu-wrapper').fadeOut();
+      //$('#scroll-menu-wrapper').fadeOut();
       }
     });
     
@@ -96,4 +98,4 @@ $(document).on("turbolinks:load", function() {
     },1200);
   });
 */
-});//= require serviceworker-companion
+});

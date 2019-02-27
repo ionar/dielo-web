@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
-  resources :partnerships, only: [:new, :create]
+  resources :partnerships, only: [:new, :create, :index]
+  resources :contacts, only: [:new, :create, :index]
   get 'products/index'
 
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'

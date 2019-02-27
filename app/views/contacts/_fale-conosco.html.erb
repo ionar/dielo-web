@@ -39,7 +39,7 @@
             <% end %>
             <%= scroll_reveal animation: 'enter left, after 0.6s' do %>
             <div class="col-md-4">
-                <%= form_for @contact, url: welcome_index_path, remote: true do |f| %>
+                <%= form_for @contact, url: contacts_path, remote: true do |f| %>
                     <div class="form-group">
                         <%= f.label :name, 'Seu nome:' %><br>
                         <%= f.text_field  :name, required: true, class: "form-control" %><br>

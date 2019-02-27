@@ -1,41 +1,122 @@
-<p id="notice"><%= notice %></p>
-
-<h1>Partnerships</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Cnpj</th>
-      <th>Kind</th>
-      <th>Address</th>
-      <th>City</th>
-      <th>Province</th>
-      <th>Email</th>
-      <th>Phone</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @partnerships.each do |partnership| %>
-      <tr>
-        <td><%= partnership.name %></td>
-        <td><%= partnership.cnpj %></td>
-        <td><%= partnership.kind %></td>
-        <td><%= partnership.address %></td>
-        <td><%= partnership.city %></td>
-        <td><%= partnership.province %></td>
-        <td><%= partnership.email %></td>
-        <td><%= partnership.phone %></td>
-        <td><%= link_to 'Show', partnership %></td>
-        <td><%= link_to 'Edit', edit_partnership_path(partnership) %></td>
-        <td><%= link_to 'Destroy', partnership, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+<!-- Seja um parceiro -->
+<div id="parceiro">
+  <div class="container">   
+    <%= scroll_reveal animation: 'enter bottom move 100px, after 1s' do %>
+        <div class="titulo-wrapper text-center">
+            <%= image_tag 'titulo-seja_um_parceiro.png', alt: 'Seja um parceiro' %>
+        </div>
     <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Partnership', new_partnership_path %>
+        <h2 class="text-center">Tenha um freezer em seu estabelecimento</h2>
+        <p class="lead text-center">Faça parte você também dessa equipe de sucesso.</p>
+        <p class="lead text-center">Adquira produtos de extrema qualidade em sua loja e aumente suas vendas.</p>
+  </div><!-- /container -->
+  <div class="container-fluid">
+    <div class="row">
+      <%= scroll_reveal animation: 'enter left, after 0.5s' do %>
+      <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 freezers text-right">
+        <%= image_tag 'freezer-acai.jpg', alt: 'PDV', class: 'img-resonsive', style: 'border-bottom: 5px solid #5E3086' %>       
+      </div><!-- /col -->
+      <% end %>
+      <div class="col-lg-4 col-md-4">
+        <%= scroll_reveal animation: 'enter left, after 0.9s' do %>
+<div class="row">            
+            <%= simple_form_for(@partnership, url: partnerships_path, remote: true) do |f| %>
+              <%= f.error_notification %>
+    <div class="col-lg-12 col-md-12" id="flash-message-partner">
+      <%= render 'partnerships/flash-partner' %>
+    </div><!-- /col --> 
+</div> <!-- /row -->
+<div class="row">
+              <div class="form-inputs col-lg-4">
+                <%= f.input :kind, :collection => [
+                      ['Supermercado','Supermercado'],
+                      ['Padaria','Padaria'],
+                      ['Restaurante','Restaurante'],
+                      ['Outros','Outros']
+                      ], prompt: t('select'), :label => "Estabelecimento" %>
+              </div><!-- /col -->
+              <div class="form-inputs col-lg-4">
+                <%= f.input :razao, label: "Razão Social" %>
+              </div><!-- /col -->
+              <div class="form-inputs col-lg-4">
+                <%= f.input :cnpj,label: "CNPJ" %>
+              </div><!-- /col -->              
+</div><!-- /row -->
+<div class="row">              
+              <div class="form-inputs col-lg-4">
+                <%= f.input :address,label: "Endereço da empresa", placeholder: "Rua, número" %>
+              </div><!-- /col -->
+              <div class="form-inputs col-lg-4">
+                <%= f.input :neighborhood,label: "Bairro" %>
+              </div><!-- /col -->              
+              <div class="form-inputs col-lg-4">
+                <%= f.input :cep, label: "Cep" %>
+              </div><!-- /col -->
+</div><!-- /row -->              
+<div class="row">
+              <div class="form-inputs col-lg-4">
+                <%= f.input :city, label: "Cidade" %>
+              </div><!-- /col -->              
+              <div class="form-inputs col-lg-4">
+                <%= f.input :province, :collection => [
+                          ['AC','AC'],
+                          ['AL','AL'],
+                          ['AM','AM'],
+                          ['AP','AP'],
+                          ['BA','BA'],
+                          ['CE','CE'],
+                          ['DF','DF'],
+                          ['ES','ES'],
+                          ['GO','GO'],
+                          ['MA','MA'],
+                          ['MG','MG'],
+                          ['MS','MS'],
+                          ['MT','MT'],
+                          ['PA','PA'],
+                          ['PB','PB'],
+                          ['PE','PE'],
+                          ['PI','PI'],
+                          ['PR','PR'],
+                          ['RJ','RJ'],
+                          ['RN','RN'],
+                          ['RO','RO'],
+                          ['RR','RR'],
+                          ['RS','RS'],
+                          ['SC','SC'],
+                          ['SE','SE'],
+                          ['SP','SP'],
+                          ['TO','TO'],
+                          ['ESTRANGEIRO','ESTRANGEIRO'],
+                        ], prompt: t('select'), :label => "Estado" %>
+              </div><!-- /col -->
+              <div class="form-inputs col-lg-4">                
+                  <%= f.input :phone, label: "Seu telefone" %>
+              </div><!-- /col -->          
+</div><!-- /row -->              
+<div class="row"> 
+              <div class="form-inputs col-lg-4">
+                <%= f.input :name, label: "Seu nome" %>
+              </div><!-- /col -->  
+              <div class="form-inputs col-lg-4">
+                  <%= f.input :email,label: "Seu email" %>
+              </div><!-- /col -->
+              <div class="form-actions col-lg-4">
+                <div style="margin-top: 23px">
+                  <%= button_tag(type: 'submit', class: "btn btn-default") do %>
+                    <span class="glyphicon glyphicon-floppy-disk"></span> Enviar pré-cadastro
+                  <% end %>
+                </div>
+              </div>
+</div><!-- /row -->           
+         
+    <% end %><!-- /form -->
+      <% end %>
+      </div><!-- /col -->
+      <%= scroll_reveal animation: 'enter left, after 1.2s' do %>
+      <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 freezers">
+        <%= image_tag 'freezer-sorvete.jpg', alt: 'PDV', class: 'img-responsive', style: 'border-bottom: 5px solid #EF2F34' %>
+      </div><!-- /col -->
+      <% end %>
+    </div><!-- /row -->
+  </div><!-- /container-fluid -->
+</div><!-- /parceiro -->

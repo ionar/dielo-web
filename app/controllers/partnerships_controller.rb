@@ -5,6 +5,7 @@ class PartnershipsController < ApplicationController
   # GET /partnerships.json
   def index
     @partnerships = Partnership.all
+    @partnership = Partnership.new
   end
 
   # GET /partnerships/1
