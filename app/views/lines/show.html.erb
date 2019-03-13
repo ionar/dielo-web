@@ -1,18 +1,33 @@
-<div class="container">
-	<%= @line.name %>
+<!-- Lines  -->
+<div id="lines">
+	<div class="container">
+		<%= scroll_reveal animation: 'enter bottom move 100px, after 1s' do %>
+			<div class="titulo-wrapper text-center">
+	  			<%= image_tag 'titulo-produtos.png', alt: 'Produtos' %>
+			</div>
+		<% end %>
+	</div><!-- /container -->
+	<div class="container">
+		<div class="categorias-list row">
 
-<% @line.products.each do |product| %>
-	<%= link_to product do %>
-	    <div class="line-wrapperX col-lg-6 col-md-6 col-sm-6 col-xs-12">
-	      <div class="line-nameX">
-	        <span class="line-name-spanX lead"><%= product.name %></span>
-	      </div><!-- /line-name -->
-	      <div class="line-photo">
-	        <%# image_tag line.image.url(:original), alt: line.name, class: 'img-responsive' %>
-	      </div><!-- /line-photo" -->
-	    </div><!-- /line-wrapper -->
-	<% end %>
-<% end %>
-
-</div>
+	        <div class="envolucro">
+	            <div class="category-line-name">
+	                <%= @line.category.name %> <%= @line.name %>
+	            </div>
+	        </div><!-- /envolucro -->
+	          <div class="row">
+	          	<ul class="nav nav-pills">
+					<% @line.products.each_with_index do |product, index| %>
+						<li>
+			              <%= link_to product do %>
+			                	<%= product.name %>
+			                    <%= image_tag product.image.url(:original), alt: product.name, class: 'img-responsive' %>
+			              <% end %>
+			          	</li>
+		            <% end %>
+		        </ul><!-- nav-pills -->
+	          </div><!-- /row -->
+		</div><!-- /categorias-list row -->	
+	</div><!-- /container -->
+</div><!-- /#lines -->
 

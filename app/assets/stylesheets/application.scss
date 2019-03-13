@@ -36,6 +36,7 @@ $vermelho-active: #EFAEAE;
  @import "quem-somos";
  @import "onde-encontrar";
  @import "todos";
+ @import "lines"; 
  @import "devise_bootstrap_views";
  /*@import "scroll-menu";*/
  @import "font-awesome";
@@ -56,7 +57,9 @@ font-weight: normal;
 src: local('Museo 700'), font-url('Museo700-Regular.woff') format('woff');
 }
 
-
+body{
+	background-color: $vermelho-escuro;
+}
 #parallax {
 	position: relative;
  	width: 100%;
@@ -178,7 +181,7 @@ div img{
 	background: image-url('hr.png') 0 0 no-repeat $vermelho-escuro;
     background-size: auto auto;
 	background-size: 100% 6px;
-	box-shadow: 0 8px 6px -6px rgba(0,0,0,0.4);
+	//box-shadow: 0 8px 6px -6px rgba(0,0,0,0.4);
 	color: #fff;
 	
 	.footer-dizeres{

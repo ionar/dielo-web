@@ -13,4 +13,6 @@ Rails.application.routes.draw do
 
   resources :products, only: [:index, :show]
   resources :lines, only: [:show]
+
+
 end
