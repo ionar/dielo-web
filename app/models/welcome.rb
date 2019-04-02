@@ -10,7 +10,7 @@ class Welcome < MailForm::Base
     def headers
       {
         :subject => "Diêlo - forumlário contato do site",
-        :to => "jose.antonio@dielo.com.br,irm@ionar.com.br,contato@dielo.com.br",
+        :to => "jose.antonio@dielo.com.br,irm@ionar.com.br,contato@dielo.com.br,sac@dielo.com.br",
         :reply_to => %("#{name}" <#{email}>),
         :from => %("#{name}" <#{email}>)
       }
